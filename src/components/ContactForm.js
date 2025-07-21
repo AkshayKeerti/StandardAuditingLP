@@ -1,6 +1,14 @@
 import React from 'react';
 
 const ContactForm = () => {
+  const businessSizes = [
+    "Startup (1-10 employees)",
+    "Small Business (11-50 employees)",
+    "Medium Business (51-200 employees)",
+    "Large Business (200+ employees)",
+    "Multinational Corporation"
+  ];
+
   return (
     <section className="section-padding bg-gradient-to-r from-vigor-light-purple-bg to-white relative overflow-hidden">
       {/* Background Pattern */}
@@ -17,7 +25,7 @@ const ContactForm = () => {
           <div className="space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
               Get in touch to know more about<br />
-              <span className="text-vigor-blue">Our Accounting Packages</span>
+              <span className="text-vigor-blue">Our Corporate Tax Services</span>
             </h2>
 
             {/* Form Container with Translucent Background */}
@@ -28,7 +36,8 @@ const ContactForm = () => {
                   <div>
                     <input
                       type="text"
-                      placeholder="Name"
+                      placeholder="Full Name *"
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-purple focus:border-transparent bg-white/90"
                     />
                   </div>
@@ -43,31 +52,30 @@ const ContactForm = () => {
                     </div>
                     <input
                       type="tel"
-                      placeholder="Mobile Number"
+                      placeholder="Phone Number *"
+                      required
                       className="w-full px-4 py-3 pl-16 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-purple focus:border-transparent bg-white/90"
                     />
                   </div>
                 </div>
                 
-                {/* Second Row - Email and Package Selection */}
+                {/* Second Row - Email and Business Size */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <input
                       type="email"
-                      placeholder="Email Address"
+                      placeholder="Email Address *"
+                      required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-purple focus:border-transparent bg-white/90"
                     />
                   </div>
                   
                   <div className="relative">
                     <select className="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-purple focus:border-transparent bg-white/90 appearance-none">
-                      <option value="">- Select Package -</option>
-                      <option value="startup">Start Up Package</option>
-                      <option value="silver">Silver Package</option>
-                      <option value="gold">Gold Package</option>
-                      <option value="platinum">Platinum Package</option>
-                      <option value="elite">Elite Package</option>
-                      <option value="ultimate">Ultimate Package</option>
+                      <option value="">Select Business Size *</option>
+                      {businessSizes.map((size, index) => (
+                        <option key={index} value={size}>{size}</option>
+                      ))}
                     </select>
                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                       <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -76,6 +84,15 @@ const ContactForm = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Additional Information */}
+                <div>
+                  <textarea
+                    placeholder="Tell us about your tax compliance needs..."
+                    rows="4"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-purple focus:border-transparent bg-white/90"
+                  ></textarea>
+                </div>
                 
                 {/* Submit Button */}
                 <div className="pt-4">
@@ -83,10 +100,16 @@ const ContactForm = () => {
                     type="submit"
                     className="w-full bg-vigor-purple hover:bg-vigor-dark-blue text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
                   >
-                    Request a Quote
+                    Get Free Tax Consultation
                   </button>
                 </div>
               </form>
+
+              <div className="mt-6 text-center">
+                <p className="text-sm text-gray-500">
+                  ✓ Free consultation ✓ UAE tax experts ✓ No obligation ✓ 24-hour response
+                </p>
+              </div>
             </div>
           </div>
 
@@ -108,6 +131,19 @@ const ContactForm = () => {
                   <p className="text-gray-600 text-lg font-medium">Professional Woman</p>
                   <p className="text-gray-500 text-sm">Smiling and confident</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Chat Bubbles */}
+            <div className="absolute top-8 -left-4 z-20">
+              {/* First Chat Bubble */}
+              <div className="bg-vigor-yellow text-gray-800 p-3 rounded-lg shadow-lg mb-2 max-w-xs">
+                <p className="text-sm">Hi there! my name is Eman</p>
+              </div>
+              
+              {/* Second Chat Bubble */}
+              <div className="bg-white text-gray-800 p-3 rounded-lg shadow-lg max-w-xs">
+                <p className="text-sm">How can I help you today?</p>
               </div>
             </div>
           </div>

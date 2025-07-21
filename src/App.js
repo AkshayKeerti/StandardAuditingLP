@@ -5,6 +5,8 @@ import PricingPackages from './components/PricingPackages';
 import AboutUs from './components/AboutUs';
 import Services from './components/Services';
 import GovernmentAgencies from './components/GovernmentAgencies';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
 import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
@@ -19,6 +21,8 @@ function App() {
       <AboutUs />
       <Services />
       <GovernmentAgencies />
+      <Testimonials />
+      <FAQ />
       <ContactForm />
       <CallToAction />
       <Footer />
