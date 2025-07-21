@@ -10,13 +10,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Socials */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="relative">
-                <span className="text-2xl font-bold text-white">VIGOR</span>
-                <div className="absolute -top-1 right-0 w-2 h-2 bg-vigor-yellow rounded-sm"></div>
-              </div>
-              <div className="text-xs text-white font-medium">
-                ACCOUNTING AND TAXATION
+            <div className="flex items-center space-x-3">
+              <img src="/standard-auditing-logo.png" alt="Standard Auditing" className="h-10 w-auto" />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">STANDARD</span>
+                <span className="text-xs text-gray-300 font-medium">AUDITING</span>
               </div>
             </div>
             
@@ -92,7 +90,7 @@ const Footer = () => {
       <div className="border-t border-gray-600 py-4">
         <div className="container-custom text-center">
           <p className="text-sm text-gray-300">
-            Copyright: © 2025 Vigor Accounts. Developed by Cloud Figma. All Rights Reserved.
+            Copyright: © 2025 Standard Auditing. Developed by Cloud Figma. All Rights Reserved.
           </p>
         </div>
       </div>

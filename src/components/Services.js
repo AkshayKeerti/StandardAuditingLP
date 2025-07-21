@@ -19,7 +19,7 @@ const Services = () => {
           <div className="mb-8">
             <p className="text-lg text-gray-700 leading-relaxed">
               An efficient accounting and bookkeeping service are the backbone of any business. 
-              Vigor Accounting & Taxation LLC provides seamless bookkeeping services that allow 
+              Standard Auditing provides seamless bookkeeping services that allow 
               you to focus on what you do best - growing your business. For businesses aiming to 
               reduce costs, increase productivity, gain access to specialized information, improve 
               performance, and focus on core competencies, outsourcing accounting & VAT-TAX filing 

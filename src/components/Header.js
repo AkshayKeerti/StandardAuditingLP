@@ -25,13 +25,11 @@ const Header = () => {
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="relative">
-              <span className="text-2xl font-bold text-vigor-blue">VIGOR</span>
-              <div className="absolute -top-1 right-0 w-2 h-2 bg-vigor-yellow rounded-sm"></div>
-            </div>
-            <div className="text-xs text-vigor-blue font-medium">
-              ACCOUNTING AND TAXATION
+          <div className="flex items-center space-x-3">
+            <img src="/standard-auditing-logo.png" alt="Standard Auditing" className="h-12 w-auto" />
+            <div className="flex flex-col">
+              <span className="text-xl font-bold text-vigor-blue">STANDARD</span>
+              <span className="text-sm text-vigor-blue font-medium">AUDITING</span>
             </div>
           </div>
 
