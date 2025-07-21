@@ -8,7 +8,6 @@ import GovernmentAgencies from './components/GovernmentAgencies';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
-import CallToAction from './components/CallToAction';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
 
@@ -24,7 +23,6 @@ function App() {
       <Testimonials />
       <FAQ />
       <ContactForm />
-      <CallToAction />
       <Footer />
       <FloatingContact />
     </div>
