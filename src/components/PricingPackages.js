@@ -34,7 +34,7 @@ const PricingPackages = () => {
       features: {
         transactions: "up to 50",
         payment: "1-3 Payments",
-        siteVisit: "To Be Discussed",
+        siteVisit: "To be Discussed",
         allIncluded: true
       }
     },
@@ -96,32 +96,33 @@ const PricingPackages = () => {
             <div className="grid grid-cols-7 gap-4">
               {/* Feature List */}
               <div className="space-y-4">
-                <div className="h-16"></div> {/* Header spacer */}
+                <div className="h-20"></div> {/* Header spacer */}
                 {features.map((feature, index) => (
                   <div key={index} className="h-12 flex items-center text-sm font-medium text-gray-700">
                     {feature}
                   </div>
                 ))}
+                <div className="h-16"></div> {/* Button spacer */}
               </div>
 
               {/* Package Cards */}
               {packages.map((pkg, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
                   {/* Package Header */}
-                  <div className={`${pkg.color} text-white p-4 text-center relative`}>
+                  <div className={`${pkg.color} text-white p-4 text-center relative flex-shrink-0 h-20 flex flex-col justify-center`}>
                     <svg className="w-6 h-6 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
-                    <h3 className="font-bold text-sm">{pkg.name}</h3>
+                    <h3 className="font-bold text-sm leading-tight">{pkg.name}</h3>
                   </div>
 
                   {/* Package Price */}
-                  <div className="p-4 text-center">
+                  <div className="p-4 text-center flex-shrink-0">
                     <div className="text-2xl font-bold text-vigor-blue">{pkg.price}</div>
                   </div>
 
                   {/* Package Features */}
-                  <div className="px-4 pb-4 space-y-3">
+                  <div className="px-4 pb-4 space-y-3 flex-grow">
                     <div className="h-12 flex items-center justify-center text-sm text-gray-600">
                       {pkg.features.transactions}
                     </div>
@@ -143,7 +144,7 @@ const PricingPackages = () => {
                   </div>
 
                   {/* Choose Plan Button */}
-                  <div className="p-4">
+                  <div className="p-4 flex-shrink-0">
                     <button className="w-full btn-secondary">
                       Choose Plan
                     </button>
