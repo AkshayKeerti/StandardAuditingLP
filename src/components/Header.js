@@ -27,10 +27,6 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src="/standard-auditing-logo.png" alt="Standard Auditing" className="h-12 w-auto" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-vigor-blue">STANDARD</span>
-              <span className="text-sm text-vigor-blue font-medium">AUDITING</span>
-            </div>
           </div>
 
           {/* Navigation */}
