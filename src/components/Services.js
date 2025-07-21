@@ -2,14 +2,34 @@ import React from 'react';
 
 const Services = () => {
   const serviceTags = [
-    "Bookkeeping",
     "Corporate Tax Services",
     "Compliance & Risk Advisory",
     "Accounting",
     "Auditing",
     "Bookkeeping",
-    "Corporate Tax!"
+    "Corporate Tax Services",
+    "Compliance & Risk Advisory",
+    "Accounting",
+    "Auditing",
+    "Bookkeeping"
   ];
+
+  const getTagColor = (tag) => {
+    switch (tag) {
+      case "Corporate Tax Services":
+        return "text-vigor-purple";
+      case "Compliance & Risk Advisory":
+        return "text-vigor-yellow";
+      case "Accounting":
+        return "text-vigor-blue";
+      case "Auditing":
+        return "text-vigor-orange";
+      case "Bookkeeping":
+        return "text-vigor-green";
+      default:
+        return "text-vigor-blue";
+    }
+  };
 
   return (
     <section className="section-padding bg-vigor-light-green">
@@ -39,22 +59,20 @@ const Services = () => {
               </svg>
             </a>
           </div>
+        </div>
+      </div>
 
-          {/* Service Tags */}
-          <div className="flex flex-wrap justify-center gap-4">
-            {serviceTags.map((tag, index) => (
-              <div
-                key={index}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors cursor-pointer ${
-                  tag === "Compliance & Risk Advisory"
-                    ? "bg-vigor-green text-white"
-                    : "bg-white text-vigor-blue hover:bg-vigor-green hover:text-white"
-                }`}
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
+      {/* Service Tags Carousel - Full Width */}
+      <div className="w-full overflow-hidden bg-vigor-light-green py-8">
+        <div className="flex animate-scroll whitespace-nowrap">
+          {serviceTags.map((tag, index) => (
+            <span
+              key={index}
+              className={`inline-block mx-8 text-2xl font-bold ${getTagColor(tag)}`}
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </section>

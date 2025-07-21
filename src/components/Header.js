@@ -3,24 +3,6 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="bg-white shadow-sm">
-      {/* Top Bar */}
-      <div className="bg-vigor-blue text-white py-2">
-        <div className="container-custom flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-2">
-            <svg className="w-4 h-4 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-            </svg>
-            <span>+971 522697195</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <svg className="w-4 h-4 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-            </svg>
-            <span>+971 56 406 6500</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Header */}
       <div className="container-custom py-4">
         <div className="flex justify-between items-center">
@@ -28,14 +10,6 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <img src="/standard-auditing-logo.png" alt="Standard Auditing" className="h-12 w-auto" />
           </div>
-
-          {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-vigor-blue hover:text-vigor-purple transition-colors">Home</a>
-            <a href="#about" className="text-vigor-blue hover:text-vigor-purple transition-colors">About</a>
-            <a href="#services" className="text-vigor-blue hover:text-vigor-purple transition-colors">Services</a>
-            <a href="#contact" className="text-vigor-blue hover:text-vigor-purple transition-colors">Contact</a>
-          </nav>
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
