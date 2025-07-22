@@ -332,7 +332,7 @@ const Services = () => {
       </div>
 
       {/* Certifications & Trust - Full Width Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-24 lg:mb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
             Certifications & Trust
@@ -351,36 +351,6 @@ const Services = () => {
               <span className="text-sm sm:text-base lg:text-lg text-gray-700 font-semibold text-left">{cert}</span>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Final CTA */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-100 max-w-5xl">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
-              Get Corporate Tax Peace of Mind, Today
-            </h2>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl text-left">
-              Avoid costly mistakes, stay ahead of compliance updates, and focus on growth.
-              Let Standard Auditing handle the complexities of UAE corporate tax while you
-              lead your business.
-            </p>
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-              <button className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white hover:bg-green-700 flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105 transition-all duration-300">
-                <span>📱</span>
-                <span>WhatsApp Now</span>
-              </button>
-              <button className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 text-white hover:bg-blue-700 flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105 transition-all duration-300">
-                <span>📞</span>
-                <span>Call Us</span>
-              </button>
-              <button className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-vigor-green text-white hover:bg-green-600 flex items-center justify-center space-x-2 shadow-lg transform hover:scale-105 transition-all duration-300">
-                <span>💰</span>
-                <span>Request a Custom Quote</span>
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>
