@@ -10,7 +10,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-r from-vigor-light-purple-bg to-white relative overflow-hidden">
+    <section id="contact-form" className="section-padding bg-gradient-to-r from-vigor-light-purple-bg to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

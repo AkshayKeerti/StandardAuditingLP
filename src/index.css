@@ -70,4 +70,33 @@
   .space-x-mobile {
     @apply space-x-3 sm:space-x-4 lg:space-x-6;
   }
+
+  /* Mobile-specific improvements */
+  .mobile-card {
+    @apply bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-lg;
+  }
+
+  .mobile-section {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto;
+  }
+
+  .mobile-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8;
+  }
+
+  .mobile-text-responsive {
+    @apply text-sm sm:text-base lg:text-lg xl:text-xl;
+  }
+
+  .mobile-heading-responsive {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+  }
+
+  .mobile-button {
+    @apply w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300;
+  }
 } 
