@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import PricingPackages from './components/PricingPackages';
 import BusinessDescription from './components/BusinessDescription';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
+      <PricingPackages />
       <BusinessDescription />
       <Services />
       <Testimonials />

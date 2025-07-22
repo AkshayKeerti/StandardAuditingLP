@@ -19,6 +19,10 @@ module.exports = {
         'gray-dark': '#374151', // Dark gray text
         'white': '#ffffff',
         'black': '#111827',
+        // Vigor colors for PricingPackages
+        'vigor-red': '#dc2626',
+        'vigor-blue': '#2563eb',
+        'vigor-green': '#059669',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],

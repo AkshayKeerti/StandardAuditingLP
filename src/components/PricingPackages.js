@@ -67,7 +67,7 @@ const PricingPackages = () => {
 
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {packages.map((pkg, index) => (
-            <div key={index} className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${pkg.popular ? 'ring-4 ring-vigor-green transform scale-105' : ''}`}>
+            <div key={index} className={`relative bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col ${pkg.popular ? 'ring-4 ring-vigor-green transform scale-105' : ''}`}>
               {pkg.popular && (
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
                   <span className="bg-vigor-green text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
@@ -89,7 +89,7 @@ const PricingPackages = () => {
               </div>
 
               {/* Package Features */}
-              <div className="p-6 sm:p-8">
+              <div className="p-6 sm:p-8 flex-grow">
                 <ul className="space-y-3 sm:space-y-4">
                   {pkg.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start space-x-3 text-left">
@@ -103,8 +103,8 @@ const PricingPackages = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="p-6 sm:p-8 pt-0">
-                <button className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
+              <div className="p-6 sm:p-8 pt-0 mt-auto">
+                <button className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base h-12 sm:h-14 flex items-center justify-center ${
                   pkg.popular 
                     ? 'bg-vigor-green text-white hover:bg-green-600 shadow-lg' 
                     : 'bg-gray-100 text-vigor-blue hover:bg-gray-200'
