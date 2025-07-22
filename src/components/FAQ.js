@@ -34,11 +34,11 @@ const FAQ = () => {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6">
+          <div className="text-left mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
               Frequently Asked Questions
             </h2>
-            <p className="text-base sm:text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600 text-left">
               Common concerns about UAE corporate tax compliance answered by our experts.
             </p>
           </div>
@@ -50,7 +50,7 @@ const FAQ = () => {
                   onClick={() => toggleFAQ(index)}
                   className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
                 >
-                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-vigor-blue pr-3 sm:pr-4">
+                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-vigor-blue pr-3 sm:pr-4 text-left">
                     {faq.question}
                   </h3>
                   <svg
@@ -70,7 +70,7 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="px-4 sm:px-6 pb-3 sm:pb-4 text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <div className="px-4 sm:px-6 pb-3 sm:pb-4 text-sm sm:text-base text-gray-700 leading-relaxed text-left">
                     {faq.answer}
                   </div>
                 </div>
@@ -79,15 +79,15 @@ const FAQ = () => {
           </div>
 
           {/* Additional Support */}
-          <div className="mt-8 sm:mt-12 text-center">
+          <div className="mt-8 sm:mt-12 text-left">
             <div className="bg-vigor-light-green rounded-2xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-vigor-blue mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-vigor-blue mb-3 sm:mb-4 text-left">
                 Still Have Questions?
               </h3>
-              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 text-left">
                 Our UAE tax specialists are here to help. Get personalized answers to your specific corporate tax concerns.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-vigor-green text-white hover:bg-green-600 flex items-center justify-center space-x-2">
                   <span>💬</span>
                   <span>Chat with Expert</span>

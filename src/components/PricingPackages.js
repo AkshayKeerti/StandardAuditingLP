@@ -56,11 +56,11 @@ const PricingPackages = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6">
+        <div className="text-left mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
             Simple Monthly Plan Tiers
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl text-left">
             Choose the perfect corporate tax solution for your business. All plans include expert UAE tax compliance and ongoing support.
           </p>
         </div>
@@ -92,11 +92,11 @@ const PricingPackages = () => {
               <div className="p-6 sm:p-8">
                 <ul className="space-y-3 sm:space-y-4">
                   {pkg.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start space-x-3">
+                    <li key={featureIndex} className="flex items-start space-x-3 text-left">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 text-vigor-green flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-sm sm:text-base text-gray-700">{feature}</span>
+                      <span className="text-sm sm:text-base text-gray-700 text-left">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -117,8 +117,8 @@ const PricingPackages = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="text-center mt-8 sm:mt-12">
-          <p className="text-sm sm:text-base text-gray-600 mb-4">
+        <div className="text-left mt-8 sm:mt-12">
+          <p className="text-sm sm:text-base text-gray-600 mb-4 text-left">
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <button className="btn-primary text-sm sm:text-base lg:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-vigor-green text-white hover:bg-green-600">

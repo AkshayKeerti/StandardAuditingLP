@@ -69,11 +69,11 @@ const Testimonials = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6">
+        <div className="text-left mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
             What Our Clients Say
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl text-left">
             Real testimonials from UAE businesses that trust Standard Auditing for their corporate tax compliance needs.
           </p>
         </div>
@@ -83,9 +83,9 @@ const Testimonials = () => {
           <div className="relative">
             {/* Testimonial Card */}
             <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-100">
-              <div className="text-center">
+              <div className="text-left">
                 {/* Rating Stars */}
-                <div className="flex justify-center mb-4 sm:mb-6">
+                <div className="flex justify-start mb-4 sm:mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -94,17 +94,17 @@ const Testimonials = () => {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-700 leading-relaxed mb-6 sm:mb-8 italic">
+                <blockquote className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-700 leading-relaxed mb-6 sm:mb-8 italic text-left">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
 
                 {/* Client Info */}
-                <div className="flex items-center justify-center space-x-3 sm:space-x-4">
+                <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="text-3xl sm:text-4xl">{testimonials[currentIndex].image}</div>
                   <div className="text-left">
-                    <h4 className="font-bold text-vigor-blue text-base sm:text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-sm sm:text-base text-gray-600">{testimonials[currentIndex].position}</p>
-                    <p className="text-xs sm:text-sm text-gray-500">{testimonials[currentIndex].company}</p>
+                    <h4 className="font-bold text-vigor-blue text-base sm:text-lg text-left">{testimonials[currentIndex].name}</h4>
+                    <p className="text-sm sm:text-base text-gray-600 text-left">{testimonials[currentIndex].position}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 text-left">{testimonials[currentIndex].company}</p>
                   </div>
                 </div>
               </div>
@@ -131,7 +131,7 @@ const Testimonials = () => {
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
+          <div className="flex justify-start mt-6 sm:mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
@@ -144,8 +144,8 @@ const Testimonials = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-8 sm:mt-12 text-center">
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-gray-600">
+          <div className="mt-8 sm:mt-12 text-left">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 text-gray-600">
               <div className="flex items-center space-x-2">
                 <span className="text-xl sm:text-2xl">✅</span>
                 <span className="text-sm sm:text-base font-medium">4.9 Star Google Rating</span>

@@ -22,22 +22,22 @@ const Hero = () => {
       <div className="container-custom relative z-10 py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="text-white space-y-8 lg:space-y-10">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+          <div className="text-white space-y-8 lg:space-y-10 text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-left">
               Corporate Tax Services for UAE Businesses
             </h1>
             
-            <p className="text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed max-w-2xl text-left">
               Expert corporate tax solutions tailored for UAE businesses. From VAT compliance to corporate tax planning, we ensure your business stays compliant while optimizing tax efficiency.
             </p>
             
-            <div className="space-y-4">
+            <div className="space-y-4 text-left">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
+                <div key={index} className="flex items-center space-x-3 text-left">
                   <svg className="w-5 h-5 text-vigor-green flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-base sm:text-lg">{benefit}</span>
+                  <span className="text-base sm:text-lg text-left">{benefit}</span>
                 </div>
               ))}
             </div>
