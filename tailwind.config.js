@@ -6,19 +6,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'vigor-blue': '#1e3a8a',
-        'vigor-dark-blue': '#1e40af',
-        'vigor-purple': '#7c3aed',
-        'vigor-light-purple': '#a855f7',
-        'vigor-green': '#10b981',
-        'vigor-yellow': '#f59e0b',
-        'vigor-orange': '#f97316',
-        'vigor-red': '#ef4444',
-        'vigor-light-green': '#d1fae5',
-        'vigor-light-purple-bg': '#f3e8ff',
+        'primary': '#2563eb', // Main blue
+        'primary-dark': '#1d4ed8', // Darker blue
+        'primary-light': '#3b82f6', // Lighter blue
+        'secondary': '#059669', // Green
+        'secondary-dark': '#047857', // Darker green
+        'secondary-light': '#10b981', // Lighter green
+        'accent': '#f59e0b', // Orange accent
+        'accent-dark': '#d97706', // Darker orange
+        'gray-custom': '#6b7280', // Custom gray
+        'gray-light': '#f9fafb', // Light gray background
+        'gray-dark': '#374151', // Dark gray text
+        'white': '#ffffff',
+        'black': '#111827',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'custom': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        'custom-lg': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       },
     },
   },

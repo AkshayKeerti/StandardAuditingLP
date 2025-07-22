@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ServicesSection from './components/ServicesSection';
-import AboutSection from './components/AboutSection';
-import TestimonialsSection from './components/TestimonialsSection';
-import ContactSection from './components/ContactSection';
+import BusinessDescription from './components/BusinessDescription';
+import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
 
@@ -13,10 +14,11 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <ServicesSection />
-      <AboutSection />
-      <TestimonialsSection />
-      <ContactSection />
+      <BusinessDescription />
+      <Services />
+      <Testimonials />
+      <FAQ />
+      <ContactForm />
       <Footer />
       <FloatingContact />
     </div>

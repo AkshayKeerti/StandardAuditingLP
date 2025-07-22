@@ -1,356 +1,180 @@
 import React from 'react';
 
 const Services = () => {
-  const coreServices = [
+  const services = [
     {
-      icon: "📋",
-      title: "Corporate Tax Registration & Return Filing",
-      description: "Ensure your business is registered, compliant, and on time, every time.",
-      color: "bg-vigor-blue",
-      gradient: "from-blue-500 to-blue-600"
+      title: "Corporate Tax Registration & Filing",
+      description: "Complete corporate tax registration and timely filing services to ensure compliance with UAE tax regulations.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+        </svg>
+      ),
+      features: ["Tax Registration", "Return Filing", "Compliance Monitoring", "Deadline Management"]
     },
     {
-      icon: "🔍",
-      title: "Tax Health Checks & Advisory",
-      description: "Uncover gaps, fix inefficiencies, and optimize your tax position with expert-led reviews.",
-      color: "bg-vigor-green",
-      gradient: "from-green-500 to-green-600"
+      title: "VAT Registration & Compliance",
+      description: "Expert VAT registration, filing, and compliance services to keep your business tax-efficient.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      ),
+      features: ["VAT Registration", "Return Filing", "Compliance Checks", "Refund Processing"]
     },
     {
-      icon: "📊",
-      title: "Transfer Pricing Documentation",
-      description: "Avoid audit triggers with OECD-aligned reports for intercompany transactions.",
-      color: "bg-vigor-purple",
-      gradient: "from-purple-500 to-purple-600"
+      title: "Accounting & Bookkeeping",
+      description: "Professional accounting and bookkeeping services to maintain accurate financial records.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm3 2h6v4H7V6zm8 8H5v-2h10v2z" clipRule="evenodd" />
+        </svg>
+      ),
+      features: ["Financial Statements", "General Ledger", "Bank Reconciliation", "Payroll Processing"]
     },
     {
-      icon: "🌍",
-      title: "Cross-Border Tax Structuring",
-      description: "Minimize double taxation risks and align international operations with UAE tax law.",
-      color: "bg-vigor-orange",
-      gradient: "from-orange-500 to-orange-600"
+      title: "Business Setup & Licensing",
+      description: "Complete business setup and licensing services to help you establish your presence in Dubai.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+      ),
+      features: ["Company Formation", "Trade License", "Visa Services", "Corporate Services"]
     },
     {
-      icon: "💰",
-      title: "Allowable Expense Planning",
-      description: "Maximize tax savings by claiming what you're entitled to, no more guesswork.",
-      color: "bg-vigor-yellow",
-      gradient: "from-yellow-500 to-yellow-600"
+      title: "Audit & Assurance Services",
+      description: "Comprehensive audit and assurance services to ensure financial transparency and compliance.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+        </svg>
+      ),
+      features: ["Financial Audits", "Internal Audits", "Compliance Audits", "Risk Assessment"]
     },
     {
-      icon: "🔗",
-      title: "Accounting System Integration",
-      description: "Seamless syncing of your finance systems with corporate tax requirements.",
-      color: "bg-vigor-red",
-      gradient: "from-red-500 to-red-600"
+      title: "Tax Advisory & Planning",
+      description: "Strategic tax planning and advisory services to optimize your tax position and minimize liabilities.",
+      icon: (
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+        </svg>
+      ),
+      features: ["Tax Planning", "Risk Assessment", "Compliance Reviews", "Strategic Advisory"]
     }
-  ];
-
-  const whoWeHelp = [
-    "Corporates managing high transaction volumes",
-    "SMEs without in-house tax expertise",
-    "Startups preparing for funding or audit-readiness",
-    "Holding companies with international entities",
-    "E-commerce & digital businesses needing tax clarity",
-    "Businesses with permanent establishments across borders"
-  ];
-
-  const businessImpact = [
-    {
-      client: "Retail Group",
-      impact: "Avoided AED 150K in penalties through audit-ready documentation",
-      icon: "🏪",
-      metric: "AED 150K",
-      metricLabel: "Penalties Avoided"
-    },
-    {
-      client: "Tech Startup",
-      impact: "Claimed overlooked deductions, improving cash flow by 12%",
-      icon: "🚀",
-      metric: "12%",
-      metricLabel: "Cash Flow Improvement"
-    },
-    {
-      client: "Multinational Firm",
-      impact: "Aligned transfer pricing strategy, reducing audit exposure",
-      icon: "🌐",
-      metric: "100%",
-      metricLabel: "Compliance Rate"
-    }
-  ];
-
-  const certifications = [
-    "Certified UAE Tax Agents",
-    "10+ Years Serving UAE Businesses",
-    "Recognized by Major Industry Associations",
-    "4.9 Star Google Rating",
-    "Proactive Updates on FTA Changes"
   ];
 
   const processSteps = [
     {
-      step: "1",
-      title: "Consultation",
-      description: "Free initial assessment of your tax needs",
-      icon: "💬"
+      step: "01",
+      title: "Initial Consultation",
+      description: "Free assessment of your business needs and requirements"
     },
     {
-      step: "2",
-      title: "Assessment",
-      description: "Comprehensive review of your current position",
-      icon: "📊"
+      step: "02",
+      title: "Service Planning",
+      description: "Customized service plan tailored to your business"
     },
     {
-      step: "3",
-      title: "Setup",
-      description: "Implementation of tax compliance systems",
-      icon: "⚙️"
+      step: "03",
+      title: "Implementation",
+      description: "Professional execution of all agreed services"
     },
     {
-      step: "4",
-      title: "Filing",
-      description: "Timely submission of all required returns",
-      icon: "📝"
-    },
-    {
-      step: "5",
-      title: "Ongoing Advisory",
-      description: "Continuous support and strategic guidance",
-      icon: "🔄"
+      step: "04",
+      title: "Ongoing Support",
+      description: "Continuous monitoring and support for compliance"
     }
   ];
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-vigor-light-green">
-      {/* Tax Landscape Section - Full Width with Background Image */}
-      <div className="relative w-full mb-20 sm:mb-24 lg:mb-32">
-        {/* Background Image */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
-          backgroundImage: 'url(/medium-shaot-woman-standing-office-with-her-hands-folded.png)'
-        }}>
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/70"></div>
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-left">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 sm:mb-8 leading-tight text-left">
-                The Tax Landscape Has Changed,<br />
-                <span className="text-vigor-green">Is Your Business Ready?</span>
-              </h2>
-              <div className="space-y-4 sm:space-y-6 text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-5xl text-left">
-                <p>
-                  With the UAE introducing a dynamic corporate tax framework, your business
-                  faces more than financial reporting, you face regulatory complexity, compliance
-                  risk, & operational disruption.
-                </p>
-                <p>
-                  From interpreting fast-changing tax laws to avoiding costly penalties, staying
-                  compliant requires more than just filing returns.
-                </p>
-                <p className="font-semibold text-vigor-green text-lg sm:text-xl lg:text-2xl text-left">
-                  It requires a tax strategy that protects your business.
-                </p>
-                <p>
-                  At Standard Auditing, we specialize in guiding UAE-based businesses through
-                  the maze of tax regulations, with a proactive, penalty-proof approach.
-                </p>
-              </div>
-              
-              {/* Call to Action Button */}
-              <div className="mt-8 sm:mt-12">
-                <button className="bg-vigor-green hover:bg-green-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                  Get Expert Tax Consultation →
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Core Services - Full Width Design */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-24 lg:mb-32">
-        <div className="text-left mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
-            Our Core Corporate Tax Services
+    <section className="section-padding bg-white">
+      <div className="container-custom">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="section-title">
+            Our <span className="text-gradient">Services</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl text-left">
-            Comprehensive tax solutions designed to keep your business compliant and tax-efficient
+          <p className="section-subtitle">
+            Comprehensive tax and accounting solutions designed to keep your business compliant and financially healthy.
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {coreServices.map((service, index) => (
-            <div key={index} className="group relative">
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full relative overflow-hidden">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                
-                <div className={`${service.color} text-white w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center text-xl sm:text-2xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {services.map((service, index) => (
+            <div key={index} className="feature-card card-hover">
+              <div className="icon-circle">
+                <div className="text-primary">
                   {service.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-vigor-blue mb-3 sm:mb-4 leading-tight text-left">{service.title}</h3>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-left">{service.description}</p>
-                
-                {/* Hover Effect */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-vigor-green to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Who We Help - Full Width with Visual Elements */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-24 lg:mb-32">
-        <div className="bg-gradient-to-r from-vigor-blue to-vigor-purple rounded-3xl p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
-          {/* Background Pattern */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
-            <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full"></div>
-          </div>
-          
-          <div className="relative z-10">
-            <div className="text-left mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-left">
-                Who We Help
-              </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-white/90 max-w-3xl text-left">
-                We work with UAE-based and cross-border businesses that require strategic
-                corporate tax support
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {whoWeHelp.map((item, index) => (
-                <div key={index} className="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20 text-left">
-                  <div className="bg-vigor-green text-white p-2 rounded-lg flex-shrink-0 shadow-lg">
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-sm sm:text-base text-white font-medium text-left">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Real Business Impact - Full Width with Metrics */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-24 lg:mb-32">
-        <div className="text-left mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
-            Real Business Impact
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-left">
-            Proven results from businesses like yours
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
-          {businessImpact.map((impact, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border-l-4 border-vigor-green hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden">
-              {/* Background Pattern */}
-              <div className="absolute top-0 right-0 w-20 h-20 bg-vigor-green/5 rounded-full -translate-y-10 translate-x-10"></div>
+              <h3 className="text-xl font-semibold text-gray-dark mb-3">{service.title}</h3>
+              <p className="text-gray-custom leading-relaxed mb-4">{service.description}</p>
               
-              <div className="relative z-10">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{impact.icon}</div>
-                <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-                  <span className="text-xl sm:text-2xl">✅</span>
-                  <h3 className="text-lg sm:text-xl font-bold text-vigor-blue text-left">{impact.client}</h3>
-                </div>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6 text-left">{impact.impact}</p>
-                
-                {/* Metric Display */}
-                <div className="bg-gradient-to-r from-vigor-green to-green-500 text-white p-3 sm:p-4 rounded-xl text-center">
-                  <div className="text-xl sm:text-2xl font-bold">{impact.metric}</div>
-                  <div className="text-xs sm:text-sm opacity-90">{impact.metricLabel}</div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Our Process - Full Width Timeline */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 sm:mb-24 lg:mb-32">
-        <div className="bg-gradient-to-r from-vigor-blue to-vigor-purple rounded-3xl p-6 sm:p-8 md:p-12 text-white relative overflow-hidden">
-          {/* Background Elements */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-white rounded-full"></div>
-          </div>
-          
-          <div className="relative z-10">
-            <div className="text-left mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 sm:mb-6 text-left">
-                Our Process: Built to Keep You Compliant
-              </h2>
-              <p className="text-base sm:text-lg lg:text-xl text-white/90 max-w-4xl text-left">
-                Every step is handled by certified tax professionals who keep your business ahead
-                of deadlines, errors, and regulatory curveballs.
-              </p>
-            </div>
-            
-            {/* Timeline */}
-            <div className="relative">
-              {/* Connection Line */}
-              <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-white/20 transform -translate-y-1/2"></div>
-              
-              <div className="grid lg:grid-cols-5 gap-6 sm:gap-8">
-                {processSteps.map((step, index) => (
-                  <div key={index} className="relative text-left group">
-                    {/* Step Circle */}
-                    <div className="bg-white text-vigor-blue w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center text-lg sm:text-xl font-bold mb-3 sm:mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
-                      {step.step}
-                    </div>
-                    
-                    {/* Step Content */}
-                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-white/20 text-left">
-                      <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">{step.icon}</div>
-                      <h3 className="text-base sm:text-lg font-bold mb-1 sm:mb-2 text-left">{step.title}</h3>
-                      <p className="text-xs sm:text-sm text-white/80 text-left">{step.description}</p>
-                    </div>
-                    
-                    {/* Arrow for mobile */}
-                    {index < processSteps.length - 1 && (
-                      <div className="lg:hidden flex justify-center mt-3 sm:mt-4">
-                        <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/50" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 3a1 1 0 011 1v10.586l3.293-3.293a1 1 0 111.414 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L9 14.586V4a1 1 0 011-1z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    )}
+              {/* Features List */}
+              <div className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-secondary rounded-full"></div>
+                    <span className="text-sm text-gray-custom">{feature}</span>
                   </div>
                 ))}
               </div>
             </div>
+          ))}
+        </div>
+
+        {/* Process Section */}
+        <div className="bg-gray-light rounded-2xl p-8 lg:p-12 mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-dark mb-4">Our Process</h3>
+            <p className="text-gray-custom max-w-2xl mx-auto">
+              Simple, transparent process designed to keep your business compliant and stress-free.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
+                  {step.step}
+                </div>
+                <h4 className="text-lg font-semibold text-gray-dark mb-2">{step.title}</h4>
+                <p className="text-gray-custom text-sm">{step.description}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Certifications & Trust - Full Width Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-left mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">
-            Certifications & Trust
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 text-left">
-            You're in expert hands with Standard Auditing.
+        {/* CTA Section */}
+        <div className="bg-gradient-bg rounded-2xl p-8 lg:p-12 text-white text-center">
+          <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            Get expert guidance and ensure your business stays compliant with UAE tax regulations.
           </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {certifications.map((cert, index) => (
-            <div key={index} className="flex items-center space-x-3 sm:space-x-4 bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-              <div className="bg-gradient-to-r from-vigor-green to-green-500 text-white p-2 sm:p-3 rounded-lg shadow-lg">
-                <span className="text-xl sm:text-2xl">✅</span>
-              </div>
-              <span className="text-sm sm:text-base lg:text-lg text-gray-700 font-semibold text-left">{cert}</span>
-            </div>
-          ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://wa.me/971503821750" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-2 bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-custom"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+              </svg>
+              <span>Get Free Consultation</span>
+            </a>
+            <button 
+              onClick={() => document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center justify-center space-x-2 bg-white hover:bg-gray-100 text-primary px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-custom"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+              </svg>
+              <span>Contact Form</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
