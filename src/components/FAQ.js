@@ -34,27 +34,27 @@ const FAQ = () => {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-vigor-blue mb-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               Common concerns about UAE corporate tax compliance answered by our experts.
             </p>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200">
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
                 >
-                  <h3 className="text-lg font-semibold text-vigor-blue pr-4">
+                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-vigor-blue pr-3 sm:pr-4">
                     {faq.question}
                   </h3>
                   <svg
-                    className={`w-6 h-6 text-vigor-blue transform transition-transform ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 text-vigor-blue transform transition-transform flex-shrink-0 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -70,7 +70,7 @@ const FAQ = () => {
                     openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <div className="px-6 pb-4 text-gray-700 leading-relaxed">
+                  <div className="px-4 sm:px-6 pb-3 sm:pb-4 text-sm sm:text-base text-gray-700 leading-relaxed">
                     {faq.answer}
                   </div>
                 </div>
@@ -79,24 +79,24 @@ const FAQ = () => {
           </div>
 
           {/* Additional Support */}
-          <div className="mt-12 text-center">
-            <div className="bg-vigor-light-green rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-vigor-blue mb-4">
+          <div className="mt-8 sm:mt-12 text-center">
+            <div className="bg-vigor-light-green rounded-2xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-vigor-blue mb-3 sm:mb-4">
                 Still Have Questions?
               </h3>
-              <p className="text-gray-700 mb-6">
+              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
                 Our UAE tax specialists are here to help. Get personalized answers to your specific corporate tax concerns.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="btn-primary text-lg px-6 py-3 bg-vigor-green text-white hover:bg-green-600 flex items-center space-x-2">
+              <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+                <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-vigor-green text-white hover:bg-green-600 flex items-center justify-center space-x-2">
                   <span>💬</span>
                   <span>Chat with Expert</span>
                 </button>
-                <button className="btn-primary text-lg px-6 py-3 bg-vigor-blue text-white hover:bg-blue-600 flex items-center space-x-2">
+                <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-vigor-blue text-white hover:bg-blue-600 flex items-center justify-center space-x-2">
                   <span>📞</span>
                   <span>Call Now</span>
                 </button>
-                <button className="btn-primary text-lg px-6 py-3 bg-transparent text-vigor-blue border-2 border-vigor-blue hover:bg-vigor-blue hover:text-white flex items-center space-x-2">
+                <button className="btn-primary text-sm sm:text-base lg:text-lg px-4 sm:px-6 py-2 sm:py-3 bg-transparent text-vigor-blue border-2 border-vigor-blue hover:bg-vigor-blue hover:text-white flex items-center justify-center space-x-2">
                   <span>📧</span>
                   <span>Email Us</span>
                 </button>

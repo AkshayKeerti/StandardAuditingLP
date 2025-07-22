@@ -9,6 +9,7 @@
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
   }
 }
 
@@ -22,11 +23,28 @@
   }
   
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
   }
   
   .container-custom {
     @apply max-w-7xl mx-auto;
+  }
+
+  /* Improved mobile responsiveness */
+  .mobile-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .mobile-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .mobile-subheading {
+    @apply text-xl sm:text-2xl lg:text-3xl;
   }
 }
 
@@ -42,5 +60,14 @@
   
   .animate-scroll {
     animation: scroll 20s linear infinite;
+  }
+
+  /* Additional spacing utilities */
+  .space-y-mobile {
+    @apply space-y-4 sm:space-y-6 lg:space-y-8;
+  }
+
+  .space-x-mobile {
+    @apply space-x-3 sm:space-x-4 lg:space-x-6;
   }
 } 

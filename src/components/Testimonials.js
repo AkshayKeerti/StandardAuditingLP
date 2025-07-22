@@ -69,11 +69,11 @@ const Testimonials = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-vigor-blue mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Real testimonials from UAE businesses that trust Standard Auditing for their corporate tax compliance needs.
           </p>
         </div>
@@ -82,29 +82,29 @@ const Testimonials = () => {
           {/* Testimonial Carousel */}
           <div className="relative">
             {/* Testimonial Card */}
-            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100">
+            <div className="bg-white rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl border border-gray-100">
               <div className="text-center">
                 {/* Rating Stars */}
-                <div className="flex justify-center mb-6">
+                <div className="flex justify-center mb-4 sm:mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <svg key={i} className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-8 italic">
+                <blockquote className="text-base sm:text-lg lg:text-xl xl:text-2xl text-gray-700 leading-relaxed mb-6 sm:mb-8 italic">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
 
                 {/* Client Info */}
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="text-4xl">{testimonials[currentIndex].image}</div>
+                <div className="flex items-center justify-center space-x-3 sm:space-x-4">
+                  <div className="text-3xl sm:text-4xl">{testimonials[currentIndex].image}</div>
                   <div className="text-left">
-                    <h4 className="font-bold text-vigor-blue text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-gray-600">{testimonials[currentIndex].position}</p>
-                    <p className="text-sm text-gray-500">{testimonials[currentIndex].company}</p>
+                    <h4 className="font-bold text-vigor-blue text-base sm:text-lg">{testimonials[currentIndex].name}</h4>
+                    <p className="text-sm sm:text-base text-gray-600">{testimonials[currentIndex].position}</p>
+                    <p className="text-xs sm:text-sm text-gray-500">{testimonials[currentIndex].company}</p>
                   </div>
                 </div>
               </div>
@@ -113,30 +113,30 @@ const Testimonials = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow z-10"
+              className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 sm:p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow z-10"
             >
-              <svg className="w-6 h-6 text-vigor-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-vigor-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow z-10"
+              className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 sm:p-3 rounded-full shadow-lg hover:shadow-xl transition-shadow z-10"
             >
-              <svg className="w-6 h-6 text-vigor-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 sm:w-6 sm:h-6 text-vigor-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
+          <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
                   index === currentIndex ? 'bg-vigor-green' : 'bg-gray-300'
                 }`}
               />
@@ -144,19 +144,19 @@ const Testimonials = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 text-center">
-            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
+          <div className="mt-8 sm:mt-12 text-center">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-gray-600">
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">✅</span>
-                <span className="font-medium">4.9 Star Google Rating</span>
+                <span className="text-xl sm:text-2xl">✅</span>
+                <span className="text-sm sm:text-base font-medium">4.9 Star Google Rating</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">✅</span>
-                <span className="font-medium">500+ UAE Businesses</span>
+                <span className="text-xl sm:text-2xl">✅</span>
+                <span className="text-sm sm:text-base font-medium">500+ UAE Businesses</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-2xl">✅</span>
-                <span className="font-medium">10+ Years Experience</span>
+                <span className="text-xl sm:text-2xl">✅</span>
+                <span className="text-sm sm:text-base font-medium">10+ Years Experience</span>
               </div>
             </div>
           </div>

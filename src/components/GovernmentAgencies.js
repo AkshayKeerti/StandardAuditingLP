@@ -32,14 +32,14 @@ const GovernmentAgencies = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-vigor-blue mb-16">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center text-vigor-blue mb-8 sm:mb-12 lg:mb-16">
           We work closely with all Government Agencies
         </h2>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
           {agencies.map((agency, index) => (
             <div key={index} className="text-center">
-              <div className="w-32 h-20 bg-gray-200 rounded-lg flex items-center justify-center mb-2">
+              <div className="w-24 h-16 sm:w-32 sm:h-20 bg-gray-200 rounded-lg flex items-center justify-center mb-2">
                 <span className="text-gray-600 text-xs text-center px-2">
                   {agency.placeholder}
                 </span>

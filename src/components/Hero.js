@@ -11,49 +11,51 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: 'url(/dubai.png)'
-    }}>
-      {/* Black Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+    <section className="relative bg-vigor-blue">
+      {/* Subtle Pattern Overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+      </div>
 
-      <div className="container-custom relative z-10 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container-custom relative z-10 py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="text-white space-y-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          <div className="text-white space-y-8 lg:space-y-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
               Corporate Tax Services for UAE Businesses
             </h1>
             
-            <p className="text-xl text-gray-200 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed max-w-2xl">
               Expert corporate tax solutions tailored for UAE businesses. From VAT compliance to corporate tax planning, we ensure your business stays compliant while optimizing tax efficiency.
             </p>
             
-            <div className="space-y-3">
+            <div className="space-y-4">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <svg className="w-5 h-5 text-vigor-green flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-lg">{benefit}</span>
+                  <span className="text-base sm:text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
 
-            <button className="btn-primary text-lg px-8 py-4 bg-vigor-green text-white hover:bg-green-600">
+            <button className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-vigor-green text-white hover:bg-green-600">
               Get Tax Consultation →
             </button>
           </div>
 
           {/* Right Content - Contact Form */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-white/20 max-w-md w-full">
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/20 max-w-md w-full">
               <div className="text-center mb-6">
                 <div className="inline-block bg-vigor-green text-white px-4 py-1 rounded-full text-sm font-medium mb-3">
                   Free Tax Consultation
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Expert Tax Advice</h3>
-                <p className="text-gray-600">Speak with our UAE tax specialists today</p>
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Get Expert Tax Advice</h3>
+                <p className="text-sm sm:text-base text-gray-600">Speak with our UAE tax specialists today</p>
               </div>
 
               <form className="space-y-4">
@@ -61,7 +63,7 @@ const Hero = () => {
                   <input
                     type="text"
                     placeholder="Full Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80 text-sm sm:text-base"
                   />
                 </div>
                 
@@ -76,7 +78,7 @@ const Hero = () => {
                   <input
                     type="tel"
                     placeholder="Phone Number"
-                    className="w-full px-4 py-3 pl-16 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80"
+                    className="w-full px-4 py-3 pl-16 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80 text-sm sm:text-base"
                   />
                 </div>
                 
@@ -84,12 +86,12 @@ const Hero = () => {
                   <input
                     type="email"
                     placeholder="Email Address"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80 text-sm sm:text-base"
                   />
                 </div>
                 
                 <div>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80 appearance-none">
+                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-vigor-green focus:border-transparent bg-white/80 appearance-none text-sm sm:text-base">
                     <option value="">Select Tax Services</option>
                     <option value="vat">VAT Registration & Filing</option>
                     <option value="corporate">Corporate Tax Planning</option>
@@ -101,14 +103,14 @@ const Hero = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-vigor-green hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  className="w-full bg-vigor-green hover:bg-green-600 text-white font-semibold py-3 sm:py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-sm sm:text-base"
                 >
                   Get Tax Consultation
                 </button>
               </form>
 
               <div className="mt-6 text-center">
-                <p className="text-sm text-gray-500">
+                <p className="text-xs sm:text-sm text-gray-500">
                   ✓ Free consultation ✓ UAE tax experts ✓ No obligation
                 </p>
               </div>
