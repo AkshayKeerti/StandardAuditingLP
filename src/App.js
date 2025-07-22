@@ -4,6 +4,8 @@ import Hero from './components/Hero';
 import PricingPackages from './components/PricingPackages';
 import BusinessDescription from './components/BusinessDescription';
 import Services from './components/Services';
+import CertificationsTrust from './components/CertificationsTrust';
+import RealBusinessImpact from './components/RealBusinessImpact';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
@@ -18,6 +20,8 @@ function App() {
       <PricingPackages />
       <BusinessDescription />
       <Services />
+      <CertificationsTrust />
+      <RealBusinessImpact />
       <Testimonials />
       <FAQ />
       <ContactForm />
