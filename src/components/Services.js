@@ -99,7 +99,7 @@ const Services = () => {
             Comprehensive tax and accounting solutions designed to keep your business compliant and financially healthy.
           </p>
         </div>
-
+        
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
@@ -118,34 +118,34 @@ const Services = () => {
                   <div key={featureIndex} className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     <span className="text-sm text-gray-custom">{feature}</span>
-                  </div>
-                ))}
+                </div>
+              ))}
               </div>
             </div>
           ))}
-        </div>
-
+          </div>
+          
         {/* Process Section */}
         <div className="bg-gray-light rounded-2xl p-8 lg:p-12 mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-dark mb-4">Our Process</h3>
             <p className="text-gray-custom max-w-2xl mx-auto">
               Simple, transparent process designed to keep your business compliant and stress-free.
-            </p>
-          </div>
-
+              </p>
+            </div>
+            
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
+                {processSteps.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
-                  {step.step}
-                </div>
+                      {step.step}
+                    </div>
                 <h4 className="text-lg font-semibold text-gray-dark mb-2">{step.title}</h4>
                 <p className="text-gray-custom text-sm">{step.description}</p>
               </div>
             ))}
-          </div>
         </div>
+      </div>
 
         {/* CTA Section */}
         <div className="bg-gradient-bg rounded-2xl p-8 lg:p-12 text-white text-center">
@@ -174,7 +174,7 @@ const Services = () => {
               </svg>
               <span>Contact Form</span>
             </button>
-          </div>
+            </div>
         </div>
       </div>
     </section>

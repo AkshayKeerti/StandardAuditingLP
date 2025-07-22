@@ -29,7 +29,7 @@ const ContactForm = () => {
           <p className="section-subtitle">
             Speak with our tax experts and get personalized advice for your business needs.
           </p>
-        </div>
+      </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Contact Form */}
@@ -39,16 +39,16 @@ const ContactForm = () => {
             <form className="space-y-6">
               {/* Name and Phone */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
+                  <div>
                   <label className="block text-sm font-medium text-gray-dark mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    required
+                    <input
+                      type="text"
+                      required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
                     placeholder="Enter your full name"
-                  />
-                </div>
-                
+                    />
+                  </div>
+                  
                 <div>
                   <label className="block text-sm font-medium text-gray-dark mb-2">Phone Number *</label>
                   <div className="relative">
@@ -63,36 +63,36 @@ const ContactForm = () => {
                       placeholder="50 123 4567"
                     />
                   </div>
-                </div>
-              </div>
-
-              {/* Email and Business Size */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-dark mb-2">Email Address *</label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
-                    placeholder="your@email.com"
-                  />
+                  </div>
                 </div>
                 
+              {/* Email and Business Size */}
+              <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                  <label className="block text-sm font-medium text-gray-dark mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
+                    placeholder="your@email.com"
+                    />
+                  </div>
+                  
                 <div>
                   <label className="block text-sm font-medium text-gray-dark mb-2">Business Size *</label>
                   <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none transition-all duration-300">
                     <option value="">Select business size</option>
-                    {businessSizes.map((size, index) => (
-                      <option key={index} value={size}>{size}</option>
-                    ))}
-                  </select>
-                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                      {businessSizes.map((size, index) => (
+                        <option key={index} value={size}>{size}</option>
+                      ))}
+                    </select>
+                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                     <svg className="w-4 h-4 text-gray-custom" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
 
               {/* Services Needed */}
               <div>
@@ -111,22 +111,22 @@ const ContactForm = () => {
               </div>
 
               {/* Message */}
-              <div>
+                <div>
                 <label className="block text-sm font-medium text-gray-dark mb-2">Additional Information</label>
-                <textarea
-                  rows="4"
+                  <textarea
+                    rows="4"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
                   placeholder="Tell us about your specific needs or questions..."
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
+                  ></textarea>
+                </div>
+                
+                {/* Submit Button */}
+                  <button
+                    type="submit"
                 className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-custom"
-              >
+                  >
                 Get Free Consultation
-              </button>
+                  </button>
 
               <p className="text-xs text-gray-custom text-center">
                 ✓ Free consultation ✓ UAE tax experts ✓ No obligation ✓ 24-hour response
@@ -159,12 +159,12 @@ const ContactForm = () => {
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
-                  </div>
+              </div>
                   <div>
                     <h4 className="font-semibold">Email Us</h4>
                     <p className="text-white/90">info@standardauditing.ae</p>
-                  </div>
-                </div>
+            </div>
+          </div>
 
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">

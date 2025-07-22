@@ -69,14 +69,14 @@ const BusinessDescription = () => {
     <section className="section-padding bg-gray-light">
       <div className="container-custom">
         {/* Header Section */}
-        <div className="text-center mb-16">
+          <div className="text-center mb-16">
           <h2 className="section-title">
             Professional <span className="text-gradient">Tax & Accounting</span> Services
-          </h2>
+            </h2>
           <p className="section-subtitle">
             Comprehensive financial solutions to keep your business compliant, efficient, and growing in the UAE market.
           </p>
-        </div>
+          </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -86,8 +86,8 @@ const BusinessDescription = () => {
               <div className="text-gray-custom font-medium">{stat.label}</div>
             </div>
           ))}
-        </div>
-
+            </div>
+            
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
@@ -101,7 +101,7 @@ const BusinessDescription = () => {
               <p className="text-gray-custom leading-relaxed">{service.description}</p>
             </div>
           ))}
-        </div>
+          </div>
 
         {/* Why Choose Us Section */}
         <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-custom">
@@ -109,7 +109,7 @@ const BusinessDescription = () => {
             <div>
               <h3 className="text-3xl font-bold text-gray-dark mb-6">
                 Why Choose Standard Auditing?
-              </h3>
+            </h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -122,12 +122,12 @@ const BusinessDescription = () => {
                     <p className="text-gray-custom text-sm">Certified professionals with extensive UAE market experience</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
                   <div>
                     <h4 className="font-semibold text-gray-dark mb-1">Compliance Guarantee</h4>
                     <p className="text-gray-custom text-sm">100% compliance with UAE tax regulations and deadlines</p>
@@ -138,8 +138,8 @@ const BusinessDescription = () => {
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                  </div>
-                  <div>
+                    </div>
+                    <div>
                     <h4 className="font-semibold text-gray-dark mb-1">Competitive Pricing</h4>
                     <p className="text-gray-custom text-sm">Transparent pricing starting from AED 700 with no hidden costs</p>
                   </div>
@@ -149,7 +149,7 @@ const BusinessDescription = () => {
                     <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                  </div>
+                    </div>
                   <div>
                     <h4 className="font-semibold text-gray-dark mb-1">24/7 Support</h4>
                     <p className="text-gray-custom text-sm">Round-the-clock support for all your tax and accounting needs</p>
