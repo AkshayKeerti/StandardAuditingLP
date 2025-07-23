@@ -219,7 +219,7 @@ const LeadFormSection = () => {
                   </div>
                 </div>
                 
-                {/* Floating Stats Cards - 25+ Years Experience in Front */}
+                {/* Floating Stats Cards - 25+ Years Experience and 1000+ Happy Clients in Front */}
                 <div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 transform -rotate-3 z-20">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-vigor-blue mb-1">25+</div>
@@ -228,7 +228,7 @@ const LeadFormSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-6 -right-6 bg-vigor-green text-white rounded-2xl shadow-xl p-6 transform rotate-3">
+                <div className="absolute -top-6 -right-6 bg-vigor-green text-white rounded-2xl shadow-xl p-6 transform rotate-3 z-20">
                   <div className="text-center">
                     <div className="text-3xl font-bold mb-1">1000+</div>
                     <div className="text-sm font-medium">Happy Clients</div>
