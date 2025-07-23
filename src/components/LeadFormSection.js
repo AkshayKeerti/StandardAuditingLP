@@ -3,7 +3,7 @@ import React from 'react';
 const LeadFormSection = () => {
   return (
     <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container-custom px-4 sm:px-6 lg:px-8">
+      <div className="container-custom px-6 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content - Image */}
           <div className="order-2 lg:order-1">

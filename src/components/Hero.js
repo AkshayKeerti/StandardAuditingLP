@@ -18,7 +18,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-[100px] pb-[50px] sm:pt-16 sm:pb-24 lg:pt-24">
+      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8 pt-[100px] pb-[50px] sm:pt-16 sm:pb-24 lg:pt-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="text-white">

@@ -104,7 +104,7 @@ const PricingPackages = () => {
 
               {/* CTA Button */}
               <div className="p-6 sm:p-8 pt-0 mt-auto">
-                <button className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base h-12 sm:h-14 flex items-center justify-center ${
+                <button className={`w-full py-3 sm:py-4 px-6 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base h-12 sm:h-14 flex items-center justify-center ${
                   pkg.popular 
                     ? 'bg-vigor-green text-white hover:bg-green-600 shadow-lg' 
                     : 'bg-gray-100 text-vigor-blue hover:bg-gray-200'

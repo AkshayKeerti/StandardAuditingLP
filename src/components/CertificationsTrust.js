@@ -79,7 +79,7 @@ const CertificationsTrust = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-50"></div>
       
-      <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-custom px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">

@@ -5,7 +5,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white text-gray-800">
-      <div className="container-custom py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom py-12 sm:py-16 px-6 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand & Logo */}
           <div className="space-y-4 sm:space-y-6">
@@ -110,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-300 py-3 sm:py-4">
-        <div className="container-custom text-center px-4 sm:px-6 lg:px-8">
+        <div className="container-custom text-center px-6 sm:px-6 lg:px-8">
           <p className="text-xs sm:text-sm text-gray-600">
             Copyright: © 2025 Standard Auditing. All Rights Reserved.
           </p>
