@@ -10,7 +10,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden" style={{ backgroundColor: '#2f3188' }}>
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

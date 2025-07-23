@@ -4,39 +4,33 @@ const WhoWeHelp = () => {
   const businessTypes = [
     {
       title: "Corporates managing high transaction volumes",
-      description: "Large-scale businesses requiring sophisticated tax strategies and compliance management",
       icon: "🏢"
     },
     {
       title: "SMEs without in-house tax expertise",
-      description: "Small and medium enterprises needing professional tax guidance and support",
       icon: "📊"
     },
     {
       title: "Startups preparing for funding or audit-readiness",
-      description: "Emerging businesses requiring tax compliance for investment and growth",
       icon: "🚀"
     },
     {
       title: "Holding companies with international entities",
-      description: "Multi-entity structures requiring cross-border tax optimization",
       icon: "🌍"
     },
     {
       title: "E-commerce & digital businesses needing tax clarity",
-      description: "Online businesses requiring specialized digital tax compliance",
       icon: "💻"
     },
     {
       title: "Businesses with permanent establishments across borders",
-      description: "International operations requiring complex tax structuring",
       icon: "🏛️"
     }
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container-custom px-6 sm:px-6 lg:px-8">
+    <section className="section-padding-alt section-light">
+      <div className="container-custom">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
@@ -52,15 +46,12 @@ const WhoWeHelp = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {businessTypes.map((business, index) => (
               <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="text-center mb-6">
+                <div className="text-center">
                   <div className="text-4xl mb-4">{business.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-xl font-bold text-gray-900 leading-tight">
                     {business.title}
                   </h3>
                 </div>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {business.description}
-                </p>
                 
                 {/* Hover Effect Indicator */}
                 <div className="mt-6 text-center">

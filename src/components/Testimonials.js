@@ -3,42 +3,34 @@ import React, { useState, useEffect } from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Ahmed Al Mansouri",
-      position: "CEO, TechStart Solutions",
-      company: "Technology Startup",
-      quote: "Standard Auditing helped us navigate the complex UAE corporate tax landscape. Their expertise saved us from costly penalties and improved our cash flow by 12% through overlooked deductions.",
-      rating: 5,
-      image: "👨‍💼"
-    },
-    {
-      name: "Sarah Johnson",
-      position: "Finance Director",
-      company: "Retail Group UAE",
-      quote: "The team at Standard Auditing is exceptional. They avoided AED 150K in penalties through their audit-ready documentation. Their proactive approach gives us peace of mind.",
-      rating: 5,
-      image: "👩‍💼"
-    },
-    {
-      name: "Mohammed Hassan",
+      name: "Senthil Kumar",
       position: "Managing Director",
-      company: "Global Trading Co.",
-      quote: "As a multinational firm, we needed expert transfer pricing documentation. Standard Auditing aligned our strategy perfectly, significantly reducing our audit exposure.",
+      company: "Triway Technologies LLC",
+      quote: "We have maintained a longstanding partnership with the esteemed team at Standard Auditing, which has greatly contributed to our successful journey. It gives us great pleasure to provide this reference, attesting to the exceptional quality of their services and the value they have brought to our business",
       rating: 5,
       image: "👨‍💼"
     },
     {
-      name: "Fatima Al Zahra",
-      position: "Founder",
-      company: "E-commerce Platform",
-      quote: "Starting a digital business in UAE was overwhelming until we found Standard Auditing. Their tax clarity and guidance have been invaluable for our growth.",
+      name: "Mohammed A Omar",
+      position: "CEO",
+      company: "Fortune Consulting FZE",
+      quote: "We have received an exemplary level of diligent and professional service from the team at Standard Auditing. Their proactive approach has been instrumental in our satisfaction. We are delighted to extend our referral of their services to our extensive personal and professional network.",
       rating: 5,
-      image: "👩‍💼"
+      image: "👨‍💼"
     },
     {
-      name: "David Chen",
-      position: "CFO",
-      company: "Manufacturing SME",
-      quote: "Standard Auditing's corporate tax services are world-class. Their 10+ years of UAE experience and certified expertise make them our trusted tax partner.",
+      name: "Alex Smith",
+      position: "CEO",
+      company: "Financial Report Limited",
+      quote: "Standard Auditing played a crucial role in guiding us through the internal preparation, registration, and compliance process of VAT. Their invaluable advice and assistance have been instrumental in our successful journey. We extend our sincere gratitude for their support and expertise.",
+      rating: 5,
+      image: "👨‍💼"
+    },
+    {
+      name: "Ravichandran",
+      position: "Financial Manager",
+      company: "Silver Bright",
+      quote: "We have been working with Standard Auditing since 2016 for our auditing, accounts, and taxation needs. They have streamlined our financial processes and proven to be both proficient and trustworthy. They are key allies to our success, and I wholeheartedly recommend them to anyone looking for dependable financial experts.",
       rating: 5,
       image: "👨‍💼"
     }
@@ -67,7 +59,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="section-padding bg-gray-light">
+    <section className="section-padding section-medium">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">

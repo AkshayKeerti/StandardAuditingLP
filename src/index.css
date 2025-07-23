@@ -28,6 +28,10 @@
   }
   
   .section-padding {
+    @apply py-20 lg:py-32 px-6 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding-alt {
     @apply py-16 lg:py-24 px-6 sm:px-6 lg:px-8;
   }
   
@@ -53,6 +57,23 @@
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Section backgrounds for better distinction */
+  .section-white {
+    @apply bg-white;
+  }
+  
+  .section-light {
+    @apply bg-gray-50;
+  }
+  
+  .section-medium {
+    @apply bg-gray-100;
+  }
+  
+  .section-dark {
+    @apply bg-gray-900 text-white;
   }
 
   /* Improved mobile responsiveness */

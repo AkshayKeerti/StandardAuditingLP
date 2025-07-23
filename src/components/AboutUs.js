@@ -41,7 +41,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding-alt section-white">
       <div className="container-custom">
         {/* About Us Title */}
         <div className="text-left mb-12 sm:mb-16">

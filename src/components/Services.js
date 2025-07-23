@@ -88,7 +88,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding section-white">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
