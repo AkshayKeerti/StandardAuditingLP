@@ -59,11 +59,8 @@ const RealBusinessImpact = () => {
   ];
 
   return (
-    <section className="section-padding section-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-50"></div>
-      
-      <div className="container-custom px-6 sm:px-6 lg:px-8 relative z-10">
+    <section className="section-padding bg-white">
+      <div className="container-custom px-6 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-20">

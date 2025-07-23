@@ -11,7 +11,7 @@ const BusinessDescription = () => {
   ];
 
   return (
-    <section className="section-padding section-light">
+    <section className="section-padding bg-gray-100">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto">
           {/* Main Heading */}
