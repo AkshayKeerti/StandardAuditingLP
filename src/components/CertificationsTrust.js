@@ -75,9 +75,9 @@ const CertificationsTrust = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-50"></div>
       
       <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -90,7 +90,7 @@ const CertificationsTrust = () => {
               UAE Corporate Tax Alert
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               The Tax Landscape Has Changed
             </h1>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-vigor-green mb-8">
@@ -98,11 +98,11 @@ const CertificationsTrust = () => {
             </h2>
             
             <div className="max-w-4xl mx-auto">
-              <p className="text-xl text-gray-300 mb-6 leading-relaxed">
+              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                 With the UAE introducing a dynamic corporate tax framework, your business faces more than financial reporting, 
-                you face <span className="text-red-400 font-semibold">regulatory complexity</span>, <span className="text-red-400 font-semibold">compliance risk</span>, & <span className="text-red-400 font-semibold">operational disruption</span>.
+                you face <span className="text-red-600 font-semibold">regulatory complexity</span>, <span className="text-red-600 font-semibold">compliance risk</span>, & <span className="text-red-600 font-semibold">operational disruption</span>.
               </p>
-              <p className="text-lg text-gray-400 leading-relaxed">
+              <p className="text-lg text-gray-500 leading-relaxed">
                 From interpreting fast-changing tax laws to avoiding costly penalties, staying compliant requires more than just filing returns. 
                 It requires a tax strategy that protects your business.
               </p>
@@ -114,9 +114,9 @@ const CertificationsTrust = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {urgencyStats.map((item, index) => (
                 <div key={index} className="text-center">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
                     <div className="text-3xl lg:text-4xl font-bold text-vigor-green mb-2">{item.stat}</div>
-                    <div className="text-sm text-gray-300 font-medium">{item.label}</div>
+                    <div className="text-sm text-gray-600 font-medium">{item.label}</div>
                   </div>
                 </div>
               ))}
@@ -126,10 +126,10 @@ const CertificationsTrust = () => {
           {/* Services Section */}
           <div className="mb-24">
             <div className="text-center mb-16">
-              <h3 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Our Core Corporate Tax Services
               </h3>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 At Standard Auditing, we specialize in guiding UAE-based businesses through the maze of tax regulations, 
                 with a proactive, penalty-proof approach.
               </p>
@@ -138,17 +138,17 @@ const CertificationsTrust = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {corporateTaxServices.map((service, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                  <div className="bg-gray-50 rounded-2xl p-8 border border-gray-200 hover:bg-gray-100 transition-all duration-500 transform hover:-translate-y-2 h-full">
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-4xl">{service.icon}</div>
                       <span className="px-3 py-1 bg-vigor-green/20 text-vigor-green text-xs font-semibold rounded-full">
                         {service.category}
                       </span>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-4">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">
                       {service.title}
                     </h4>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </div>
@@ -159,13 +159,13 @@ const CertificationsTrust = () => {
 
           {/* Benefits Section */}
           <div className="mb-24">
-            <div className="bg-gradient-to-r from-vigor-blue/20 to-blue-900/20 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/20">
+            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12 border border-gray-200">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                  <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                     Who We Help
                   </h3>
-                  <p className="text-xl text-gray-300 mb-8">
+                  <p className="text-xl text-gray-600 mb-8">
                     We work with UAE-based and cross-border businesses that require strategic corporate tax support:
                   </p>
                   <div className="space-y-4">
@@ -177,31 +177,31 @@ const CertificationsTrust = () => {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-white mb-1">{item.category}</h4>
-                          <p className="text-gray-300 text-sm">{item.description}</p>
+                          <h4 className="font-semibold text-gray-900 mb-1">{item.category}</h4>
+                          <p className="text-gray-600 text-sm">{item.description}</p>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                    <h4 className="text-2xl font-bold text-white mb-6 text-center">Our Promise</h4>
+                  <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
+                    <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Promise</h4>
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                        <span className="text-gray-300">Zero Penalties</span>
+                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600">Zero Penalties</span>
                         <span className="text-vigor-green font-bold">Guaranteed</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                        <span className="text-gray-300">Response Time</span>
+                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600">Response Time</span>
                         <span className="text-vigor-green font-bold">&lt; 2 Hours</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                        <span className="text-gray-300">Success Rate</span>
+                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600">Success Rate</span>
                         <span className="text-vigor-green font-bold">98%</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-white/5 rounded-lg">
-                        <span className="text-gray-300">FTA Certified</span>
+                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <span className="text-gray-600">FTA Certified</span>
                         <span className="text-vigor-green font-bold">✓</span>
                       </div>
                     </div>
