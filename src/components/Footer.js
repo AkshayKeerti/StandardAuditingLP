@@ -12,12 +12,6 @@ const Footer = () => {
             <div className="flex items-center space-x-3">
               <img src="/standard-auditing-logo.png" alt="Standard Auditing" className="h-8 sm:h-10 w-auto" />
             </div>
-            <div>
-              <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">Standard Auditing</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Your trusted partner for corporate tax compliance and advisory services in the UAE.
-              </p>
-            </div>
           </div>
 
           {/* Contact Information */}
@@ -118,7 +112,7 @@ const Footer = () => {
       <div className="border-t border-gray-300 py-3 sm:py-4">
         <div className="container-custom text-center px-4 sm:px-6 lg:px-8">
           <p className="text-xs sm:text-sm text-gray-600">
-            Copyright: © 2025 Standard Auditing. Developed by Cloud Figma. All Rights Reserved.
+            Copyright: © 2025 Standard Auditing. All Rights Reserved.
           </p>
         </div>
       </div>
