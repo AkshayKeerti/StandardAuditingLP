@@ -29,80 +29,8 @@ const LeadFormSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-            {/* Left Content - Visual Elements */}
-            <div className="order-2 lg:order-1">
-              <div className="relative">
-                {/* Main Image Card */}
-                <div className="bg-gradient-to-br from-vigor-blue to-blue-900 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-                  <div className="relative z-10">
-                    <div className="aspect-w-16 aspect-h-12 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm mb-6">
-                      <img 
-                        src="/medium-shaot-woman-standing-office-with-her-hands-folded.png" 
-                        alt="Professional tax consultation session" 
-                        className="w-full h-full object-cover rounded-2xl"
-                      />
-                    </div>
-                    <div className="text-center">
-                      <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
-                        Expert Tax Consultation
-                      </h3>
-                      <p className="text-gray-200 text-lg">
-                        Personalized advice from certified UAE tax specialists
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating Stats Cards */}
-                <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 transform rotate-3">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-vigor-blue mb-1">25+</div>
-                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-                    <div className="w-8 h-1 bg-vigor-blue rounded-full mx-auto mt-2"></div>
-                  </div>
-                </div>
-                
-                <div className="absolute -bottom-6 -left-6 bg-vigor-green text-white rounded-2xl shadow-xl p-6 transform -rotate-3">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold mb-1">1000+</div>
-                    <div className="text-sm font-medium">Happy Clients</div>
-                    <div className="w-8 h-1 bg-white/30 rounded-full mx-auto mt-2"></div>
-                  </div>
-                </div>
-
-                {/* Trust Indicators */}
-                <div className="mt-8 grid grid-cols-3 gap-4">
-                  <div className="bg-white rounded-xl p-4 text-center shadow-lg border border-gray-100">
-                    <div className="w-12 h-12 bg-vigor-green/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <svg className="w-6 h-6 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900">Certified</div>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 text-center shadow-lg border border-gray-100">
-                    <div className="w-12 h-12 bg-vigor-blue/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <svg className="w-6 h-6 text-vigor-blue" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900">Secure</div>
-                  </div>
-                  <div className="bg-white rounded-xl p-4 text-center shadow-lg border border-gray-100">
-                    <div className="w-12 h-12 bg-vigor-green/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <svg className="w-6 h-6 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="text-sm font-semibold text-gray-900">Fast</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content - Enhanced Form */}
-            <div className="order-1 lg:order-2">
+            {/* Left Content - Enhanced Form */}
+            <div className="order-1 lg:order-1">
               <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 lg:p-12 relative overflow-hidden">
                 {/* Form Background Pattern */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-vigor-green/5 rounded-full blur-2xl"></div>
@@ -270,6 +198,45 @@ const LeadFormSection = () => {
                     </div>
                   </form>
                 </div>
+              </div>
+            </div>
+
+            {/* Right Content - Visual Elements */}
+            <div className="order-2 lg:order-2">
+              <div className="relative">
+                {/* Main Image Card */}
+                <div className="bg-gradient-to-br from-vigor-blue to-blue-900 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                  <div className="relative z-10">
+                    <div className="aspect-w-16 aspect-h-12 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm mb-6">
+                      <img 
+                        src="/medium-shaot-woman-standing-office-with-her-hands-folded.png" 
+                        alt="Professional tax consultation session" 
+                        className="w-full h-full object-cover rounded-2xl"
+                      />
+                    </div>
+
+                  </div>
+                </div>
+                
+                {/* Floating Stats Cards - 25+ Years Experience in Front */}
+                <div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 transform -rotate-3 z-20">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-vigor-blue mb-1">25+</div>
+                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                    <div className="w-8 h-1 bg-vigor-blue rounded-full mx-auto mt-2"></div>
+                  </div>
+                </div>
+                
+                <div className="absolute -bottom-6 -right-6 bg-vigor-green text-white rounded-2xl shadow-xl p-6 transform rotate-3">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold mb-1">1000+</div>
+                    <div className="text-sm font-medium">Happy Clients</div>
+                    <div className="w-8 h-1 bg-white/30 rounded-full mx-auto mt-2"></div>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </div>
