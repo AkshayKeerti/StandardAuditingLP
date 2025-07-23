@@ -6,6 +6,7 @@ import CertificationsTrust from './components/CertificationsTrust';
 import RealBusinessImpact from './components/RealBusinessImpact';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import LeadFormSection from './components/LeadFormSection';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import FloatingContact from './components/FloatingContact';
@@ -20,6 +21,7 @@ function App() {
       <RealBusinessImpact />
       <Testimonials />
       <FAQ />
+      <LeadFormSection />
       <ContactForm />
       <Footer />
       <FloatingContact />
