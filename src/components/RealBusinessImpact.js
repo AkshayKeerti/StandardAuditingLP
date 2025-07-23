@@ -59,7 +59,7 @@ const RealBusinessImpact = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="section-padding section-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-50"></div>
       
