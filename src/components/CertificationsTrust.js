@@ -36,28 +36,22 @@ const CertificationsTrust = () => {
 
   const whoWeHelp = [
     {
-      category: "Corporates managing high transaction volumes",
-      description: "Large enterprises with complex tax requirements and high-volume transactions"
+      category: "Corporates managing high transaction volumes"
     },
     {
-      category: "SMEs without in-house tax expertise",
-      description: "Small and medium enterprises needing external tax support"
+      category: "SMEs without in-house tax expertise"
     },
     {
-      category: "Startups preparing for funding or audit-readiness",
-      description: "Growing companies preparing for investment or compliance audits"
+      category: "Startups preparing for funding or audit-readiness"
     },
     {
-      category: "Holding companies with international entities",
-      description: "Companies with cross-border operations and multiple entities"
+      category: "Holding companies with international entities"
     },
     {
-      category: "E-commerce & digital businesses needing tax clarity",
-      description: "Online businesses requiring clear tax guidance for digital operations"
+      category: "E-commerce & digital businesses needing tax clarity"
     },
     {
-      category: "Businesses with permanent establishments across borders",
-      description: "Companies with operations in multiple jurisdictions"
+      category: "Businesses with permanent establishments across borders"
     }
   ];
 
@@ -170,32 +164,31 @@ const CertificationsTrust = () => {
                           </svg>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{item.category}</h4>
-                          <p className="text-gray-600 text-sm">{item.description}</p>
+                          <h4 className="font-semibold text-gray-900">{item.category}</h4>
                         </div>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="relative">
-                  <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
-                    <h4 className="text-2xl font-bold text-gray-900 mb-6 text-center">Our Promise</h4>
-                    <div className="space-y-4">
-                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                        <span className="text-gray-600">Zero Penalties</span>
-                        <span className="text-vigor-green font-bold">Guaranteed</span>
+                  <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-200 shadow-lg">
+                    <h4 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6 text-center">Our Promise</h4>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <span className="text-sm sm:text-base text-gray-600 mb-1 sm:mb-0">Zero Penalties</span>
+                        <span className="text-sm sm:text-base text-vigor-green font-bold">Guaranteed</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                        <span className="text-gray-600">Response Time</span>
-                        <span className="text-vigor-green font-bold">&lt; 2 Hours</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <span className="text-sm sm:text-base text-gray-600 mb-1 sm:mb-0">Response Time</span>
+                        <span className="text-sm sm:text-base text-vigor-green font-bold">&lt; 2 Hours</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                        <span className="text-gray-600">Success Rate</span>
-                        <span className="text-vigor-green font-bold">98%</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <span className="text-sm sm:text-base text-gray-600 mb-1 sm:mb-0">Success Rate</span>
+                        <span className="text-sm sm:text-base text-vigor-green font-bold">98%</span>
                       </div>
-                      <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-                        <span className="text-gray-600">FTA Certified</span>
-                        <span className="text-vigor-green font-bold">✓</span>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-3 sm:p-4 bg-gray-50 rounded-lg">
+                        <span className="text-sm sm:text-base text-gray-600 mb-1 sm:mb-0">FTA Certified</span>
+                        <span className="text-sm sm:text-base text-vigor-green font-bold">✓</span>
                       </div>
                     </div>
                   </div>
