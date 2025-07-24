@@ -63,11 +63,11 @@ const CertificationsTrust = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-blue-100/30 to-indigo-50 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-vigor-green/5 to-vigor-blue/5"></div>
-      <div className="absolute top-0 left-0 w-72 h-72 bg-vigor-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-vigor-blue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-indigo-100/20"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       
       <div className="container-custom px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -146,7 +146,7 @@ const CertificationsTrust = () => {
 
           {/* Benefits Section */}
           <div className="mb-24">
-            <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12 border border-gray-200">
+            <div className="bg-gradient-to-r from-blue-100/50 to-indigo-100/50 rounded-3xl p-8 lg:p-12 border border-blue-200/50">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">

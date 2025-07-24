@@ -2,11 +2,11 @@ import React from 'react';
 
 const LeadFormSection = () => {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-purple-50 via-violet-100/30 to-fuchsia-50 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-vigor-green/5 to-vigor-blue/5"></div>
-      <div className="absolute top-0 left-0 w-72 h-72 bg-vigor-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-vigor-blue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-violet-100/20"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-purple-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-violet-200/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       
       <div className="container-custom px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -205,7 +205,7 @@ const LeadFormSection = () => {
             <div className="order-2 lg:order-2">
               <div className="relative">
                 {/* Main Image Card */}
-                <div className="bg-gradient-to-br from-vigor-blue to-blue-900 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+                <div className="bg-gradient-to-br from-purple-600 to-violet-700 rounded-3xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
                   <div className="relative z-10">
                     <div className="aspect-w-16 aspect-h-12 rounded-2xl overflow-hidden bg-white/10 backdrop-blur-sm mb-6">
@@ -222,9 +222,9 @@ const LeadFormSection = () => {
                 {/* Floating Stats Cards - 25+ Years Experience and 1000+ Happy Clients in Front */}
                 <div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-6 border border-gray-100 transform -rotate-3 z-20">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-vigor-blue mb-1">25+</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-1">25+</div>
                     <div className="text-sm text-gray-600 font-medium">Years Experience</div>
-                    <div className="w-8 h-1 bg-vigor-blue rounded-full mx-auto mt-2"></div>
+                    <div className="w-8 h-1 bg-purple-600 rounded-full mx-auto mt-2"></div>
                   </div>
                 </div>
                 

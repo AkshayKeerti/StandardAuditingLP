@@ -35,7 +35,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="section-padding bg-gray-light">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-16">
