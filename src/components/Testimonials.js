@@ -36,6 +36,14 @@ const Testimonials = () => {
     }
   ];
 
+  const clientLogos = [
+    { name: "Carl Stahl", logo: "/Carl Stahl.png" },
+    { name: "Malwan Star", logo: "/Malwan star.png" },
+    { name: "TD Williamson", logo: "/TDWilliamson-1.png" },
+    { name: "Yield4Finance", logo: "/Yield4Finance.png" },
+    { name: "Multiproducts", logo: "/Multiproducts.webp" }
+  ];
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -59,8 +67,12 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="section-padding section-medium">
-      <div className="container-custom">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-vigor-green/5 to-vigor-blue/5"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-vigor-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-vigor-blue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div className="container-custom relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="section-title">
@@ -141,6 +153,35 @@ const Testimonials = () => {
                 }`}
               />
             ))}
+          </div>
+
+          {/* Client Logos Section */}
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl lg:text-3xl font-bold text-gray-dark mb-4">
+                Trusted by Leading Companies
+              </h3>
+              <p className="text-gray-custom text-lg">
+                We're proud to serve businesses across various industries in the UAE
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-custom">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+                {clientLogos.map((client, index) => (
+                  <div key={index} className="flex justify-center items-center group">
+                    <div className="relative p-4 rounded-xl transition-all duration-300 hover:bg-gray-50 hover:shadow-md">
+                      <img
+                        src={client.logo}
+                        alt={`${client.name} logo`}
+                        className="h-12 lg:h-16 w-auto object-contain transition-all duration-300 opacity-70 hover:opacity-100"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Trust Indicators */}

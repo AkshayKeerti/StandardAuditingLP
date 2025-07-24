@@ -54,7 +54,7 @@ const PricingPackages = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-left mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-vigor-blue mb-4 sm:mb-6 text-left">

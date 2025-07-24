@@ -4,37 +4,31 @@ const CertificationsTrust = () => {
   const corporateTaxServices = [
     {
       title: "Corporate Tax Registration & Return Filing",
-      description: "Complete registration and accurate filing to ensure compliance with UAE's new corporate tax framework",
       icon: "📋",
       category: "Core Service"
     },
     {
       title: "Tax Health Checks & Advisory",
-      description: "Comprehensive assessment of your tax position and strategic advisory to optimize compliance",
       icon: "🔍",
       category: "Advisory"
     },
     {
       title: "Transfer Pricing Documentation",
-      description: "Expert documentation and compliance for related-party transactions and pricing strategies",
       icon: "⚖️",
       category: "Specialized"
     },
     {
       title: "Cross-Border Tax Structuring",
-      description: "Strategic planning for international operations and cross-border tax optimization",
       icon: "🌍",
       category: "Strategic"
     },
     {
       title: "Allowable Expense Planning",
-      description: "Maximize tax efficiency through strategic expense categorization and deduction optimization",
       icon: "💰",
       category: "Optimization"
     },
     {
       title: "Accounting System Integration",
-      description: "Seamless integration with Zoho, QuickBooks and other systems for automated compliance",
       icon: "🔗",
       category: "Technology"
     }
@@ -75,9 +69,11 @@ const CertificationsTrust = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-100 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-50"></div>
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-vigor-green/5 to-vigor-blue/5"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-vigor-green/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-vigor-blue/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
       
       <div className="container-custom px-6 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
@@ -145,12 +141,9 @@ const CertificationsTrust = () => {
                         {service.category}
                       </span>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">
+                    <h4 className="text-xl font-bold text-gray-900">
                       {service.title}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed">
-                      {service.description}
-                    </p>
                   </div>
                 </div>
               ))}
