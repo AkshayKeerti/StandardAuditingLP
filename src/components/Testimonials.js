@@ -96,18 +96,18 @@ const Testimonials = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-green-100/20 to-emerald-100/20"></div>
       <div className="absolute top-0 left-0 w-72 h-72 bg-green-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-      <div className="container-custom relative z-10">
+      <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="section-title">
+          <h2 className="section-title px-4 sm:px-0">
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle px-4 sm:px-0">
             Real testimonials from UAE businesses that trust Standard Auditing for their tax and accounting needs.
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto px-4 sm:px-0">
           {/* Testimonial Carousel */}
           <div className="relative">
             {/* Testimonial Card */}
@@ -130,7 +130,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Quote */}
-                <blockquote className="text-lg sm:text-xl lg:text-2xl text-gray-dark leading-relaxed mb-6 sm:mb-8 italic px-2 sm:px-0">
+                <blockquote className="text-lg sm:text-xl lg:text-2xl text-gray-dark leading-relaxed mb-6 sm:mb-8 italic px-4 sm:px-6 lg:px-8">
                   "{testimonials[currentIndex].quote}"
                 </blockquote>
 
@@ -182,7 +182,7 @@ const Testimonials = () => {
           {/* Client Logos Section */}
           <div className="mt-12 sm:mt-16">
             <div className="text-center mb-6 sm:mb-8">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-dark mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-dark mb-3 sm:mb-4 px-4 sm:px-0">
                 Trusted by Leading Companies
               </h3>
               <p className="text-gray-custom text-base sm:text-lg px-4 sm:px-0">
