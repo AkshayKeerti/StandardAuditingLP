@@ -17,14 +17,14 @@ const Header = () => {
             <div className="lg:hidden space-y-2">
               <div className="flex items-center space-x-2">
                 <img src="/whatsapp-1.png" alt="WhatsApp" className="w-5 h-5" />
-                <span className="text-sm text-vigor-blue font-bold max-[500px]:font-bold">+971 50 382 1750</span>
+                <span className="text-sm text-vigor-blue font-bold max-[500px]:font-bold">+971 54 211 9784</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                 </svg>
-                <span className="text-sm text-vigor-blue font-bold max-[500px]:font-bold">info@standardauditing.ae</span>
+                <span className="text-sm text-vigor-blue font-bold max-[500px]:font-bold">Sales@standardauditors.com</span>
               </div>
             </div>
           </div>
@@ -33,18 +33,18 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <img src="/whatsapp-1.png" alt="WhatsApp" className="w-5 h-5" />
-              <span className="text-sm text-vigor-blue">+971 50 382 1750</span>
+              <span className="text-sm text-vigor-blue">+971 54 211 9784</span>
             </div>
             <div className="flex items-center space-x-2">
               <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
               </svg>
-              <span className="text-sm text-vigor-blue">info@standardauditing.ae</span>
+              <span className="text-sm text-vigor-blue">Sales@standardauditors.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <img src="/Phone.webp" alt="Phone" className="w-5 h-5" />
-              <span className="text-sm text-vigor-blue">04 379 5200</span>
+              <span className="text-sm text-vigor-blue">+971 54 211 9784</span>
             </div>
           </div>
 

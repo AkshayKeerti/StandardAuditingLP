@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import PricingPackages from './components/PricingPackages';
+import ListedAuditors from './components/ListedAuditors';
 import CertificationsTrust from './components/CertificationsTrust';
 import RealBusinessImpact from './components/RealBusinessImpact';
 import Testimonials from './components/Testimonials';
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <Hero />
       <PricingPackages />
+      <ListedAuditors />
       <CertificationsTrust />
       <RealBusinessImpact />
       <Testimonials />

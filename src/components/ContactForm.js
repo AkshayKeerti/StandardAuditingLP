@@ -149,7 +149,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Call Us</h4>
-                    <p className="text-white/90">+971 50 382 1750</p>
+                    <p className="text-white/90">+971 54 211 9784</p>
                   </div>
                 </div>
 
@@ -162,7 +162,7 @@ const ContactForm = () => {
               </div>
                   <div>
                     <h4 className="font-semibold">Email Us</h4>
-                    <p className="text-white/90">info@standardauditing.ae</p>
+                    <p className="text-white/90">Sales@standardauditors.com</p>
             </div>
           </div>
 

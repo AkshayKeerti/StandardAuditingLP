@@ -3,53 +3,36 @@ import React from 'react';
 const PricingPackages = () => {
   const packages = [
     {
-      name: "STARTER",
-      price: "AED 249",
-      period: "per month",
+      name: "Corporate Tax – Filing Only",
+      price: "AED 750",
+      period: "+ VAT",
       color: "bg-vigor-red",
-      description: "Perfect for small businesses getting started with corporate tax compliance",
+      description: "Ideal for businesses under AED 3 million annual revenue, qualifying for Small Business Relief",
       features: [
-        "Corporate Tax Registration",
-        "Basic Tax Return Filing",
-        "Quarterly Compliance Updates",
-        "Email Support",
-        "Basic Tax Advisory"
+        "Corporate Tax Return Filing",
+        "Eligibility Assessment for Small Business Relief",
+        "Basic Compliance Check",
+        "FTA Portal Review & Submission"
       ],
       cta: "Get Started"
     },
     {
-      name: "GROWTH",
-      price: "AED 599",
-      period: "per month",
+      name: "Corporate Tax – Filing + Tax Payable",
+      price: "AED 1,500",
+      period: "+ VAT",
       color: "bg-vigor-blue",
-      description: "Ideal for growing businesses with moderate transaction volumes",
+      description: "Suitable for companies obligated to compute and pay Corporate Tax under current FTA rules, typically those with revenues above AED 3 million.",
       features: [
-        "Everything in Starter",
-        "Tax Health Checks",
-        "Transfer Pricing Documentation",
-        "Monthly Compliance Reviews",
-        "Priority Support",
-        "Dedicated Tax Advisor"
+        "Full Corporate Tax Return Filing",
+        "Tax Computation & Payment Summary",
+        "Review of Financials & Adjustments",
+        "Compliance Review & Documentation",
+        "FTA Portal Submission & Confirmation",
+        "Basic Advisory on Deductions & Adjustments",
+        "WhatsApp/Email Support"
       ],
       cta: "Choose Growth",
       popular: true
-    },
-    {
-      name: "SCALE",
-      price: "AED 1,200",
-      period: "per month",
-      color: "bg-vigor-green",
-      description: "Comprehensive solution for established businesses with complex needs",
-      features: [
-        "Everything in Growth",
-        "Cross-Border Tax Structuring",
-        "Advanced Expense Planning",
-        "Accounting System Integration",
-        "Weekly Support Calls",
-        "Custom Tax Strategy",
-        "Audit Support"
-      ],
-      cta: "Scale Up"
     }
   ];
 
@@ -65,7 +48,7 @@ const PricingPackages = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {packages.map((pkg, index) => (
             <div key={index} className={`relative bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col ${pkg.popular ? 'ring-4 ring-vigor-green transform scale-105' : ''}`}>
               {pkg.popular && (

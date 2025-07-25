@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="text-white">
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              Corporate Tax/ VAT Setup
+              Corporate TAX/VAT Service
             </h1>
             
             {/* Price Tag */}
@@ -58,7 +58,7 @@ const Hero = () => {
               </h3>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://wa.me/971503821750" 
+                  href="https://wa.me/971542119784" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center space-x-2 bg-primary-dark hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-custom"
@@ -70,7 +70,7 @@ const Hero = () => {
                 </a>
                 
                 <a 
-                  href="tel:+971503821750" 
+                  href="tel:+971542119784" 
                   className="flex items-center justify-center space-x-2 bg-primary-dark hover:bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-custom"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
