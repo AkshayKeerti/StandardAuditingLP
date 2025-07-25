@@ -52,7 +52,7 @@ const PricingPackages = () => {
           {packages.map((pkg, index) => (
             <div key={index} className={`relative bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col ${pkg.popular ? 'ring-4 ring-vigor-green transform scale-105' : ''}`}>
               {pkg.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
                   <span className="bg-vigor-green text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
                     MOST POPULAR
                   </span>
