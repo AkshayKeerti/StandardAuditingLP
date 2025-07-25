@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import PricingPackages from './components/PricingPackages';
 import ListedAuditors from './components/ListedAuditors';
+import GovernmentAgencies from './components/GovernmentAgencies';
+import ClientLogos from './components/ClientLogos';
 import CertificationsTrust from './components/CertificationsTrust';
 import RealBusinessImpact from './components/RealBusinessImpact';
 import Testimonials from './components/Testimonials';
@@ -17,6 +19,8 @@ function App() {
       <Hero />
       <PricingPackages />
       <ListedAuditors />
+      <GovernmentAgencies />
+      <ClientLogos />
       <CertificationsTrust />
       <RealBusinessImpact />
       <Testimonials />

@@ -5,42 +5,50 @@ const ListedAuditors = () => {
     {
       name: "DMCC",
       fullName: "Dubai Multi Commodities Centre",
-      type: "Free Zone Authority"
+      type: "Free Zone Authority",
+      logo: "/dmcc.png"
     },
     {
       name: "DAFZA",
       fullName: "Dubai Airport Free Zone Authority",
-      type: "Free Zone Authority"
+      type: "Free Zone Authority",
+      logo: "/dafza.png"
     },
     {
       name: "DIFC",
       fullName: "Dubai International Financial Centre",
-      type: "Financial Free Zone"
+      type: "Financial Free Zone",
+      logo: "/difc.png"
     },
     {
       name: "Meydan",
       fullName: "Meydan Free Zone",
-      type: "Free Zone Authority"
+      type: "Free Zone Authority",
+      logo: "/Meydan_Free_Zone_Logo.png"
     },
     {
       name: "SHAMS",
       fullName: "Sharjah Media City",
-      type: "Free Zone Authority"
+      type: "Free Zone Authority",
+      logo: "/Shams_Logo.png"
     },
     {
       name: "JAFZA",
       fullName: "Jebel Ali Free Zone Authority",
-      type: "Free Zone Authority"
+      type: "Free Zone Authority",
+      logo: "/jafza-log.png"
     },
     {
       name: "Chamber of Commerce",
       fullName: "Dubai Chamber of Commerce",
-      type: "Business Association"
+      type: "Business Association",
+      logo: "/dubai_chamber.png"
     },
     {
       name: "Ministry of Economy",
       fullName: "UAE Ministry of Economy",
-      type: "Federal Authority"
+      type: "Federal Authority",
+      logo: "/ministry_of_economy.png"
     }
   ];
 
@@ -77,10 +85,21 @@ const ListedAuditors = () => {
               <div key={index} className="group relative">
                 <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all duration-500 transform hover:-translate-y-2 h-full">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
+                    <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center p-2 border border-gray-100">
+                      <img 
+                        src={authority.logo} 
+                        alt={`${authority.name} logo`}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div className="w-full h-full bg-blue-100 rounded-lg flex items-center justify-center hidden">
+                        <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      </div>
                     </div>
                     <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">
                       {authority.type}
