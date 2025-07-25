@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const PricingPackages = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 500);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   const packages = [
     {
       name: "Corporate Tax – Filing Only",
@@ -48,9 +60,9 @@ const PricingPackages = () => {
           </p>
         </div>
 
-        <div className="flex flex-row gap-6 sm:gap-8 max-w-4xl mx-auto items-stretch">
+        <div className={`grid gap-6 sm:gap-8 max-w-4xl mx-auto items-stretch ${isMobile ? 'grid-cols-1' : 'grid-cols-2'}`}>
           {packages.map((pkg, index) => (
-            <div key={index} className="relative w-full flex-1 flex flex-col">
+            <div key={index} className="relative w-full flex flex-col">
               {/* Popular banner positioned to not affect card alignment */}
               <div className="h-12 flex justify-center items-end mb-4">
                 {pkg.popular && (

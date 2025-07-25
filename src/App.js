@@ -9,7 +9,6 @@ import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import LeadFormSection from './components/LeadFormSection';
 import Footer from './components/Footer';
-import FloatingContact from './components/FloatingContact';
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
       <FAQ />
       <LeadFormSection />
       <Footer />
-      <FloatingContact />
     </div>
   );
 }
