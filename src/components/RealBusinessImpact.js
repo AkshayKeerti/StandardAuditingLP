@@ -60,6 +60,7 @@ const RealBusinessImpact = () => {
 
   return (
     <section className="section-padding bg-white">
+      
       <div className="container-custom px-6 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
@@ -85,14 +86,14 @@ const RealBusinessImpact = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {businessCases.map((case_, index) => (
                 <div key={index} className="group relative">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-500 transform hover:-translate-y-2 h-full">
+                  <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-500 transform hover:-translate-y-2 h-full shadow-lg">
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-4xl">{case_.icon}</div>
                       <span className="px-3 py-1 bg-vigor-green/20 text-vigor-green text-xs font-semibold rounded-full">
                         {case_.category}
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
                       {case_.company}
                     </h3>
                     <div className="mb-4">
