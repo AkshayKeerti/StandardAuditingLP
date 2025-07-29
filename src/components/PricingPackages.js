@@ -115,8 +115,8 @@ const PricingPackages = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="text-left mt-8 sm:mt-12">
-          <p className="text-sm sm:text-base text-gray-600 mb-4 text-left">
+        <div className="text-center mt-8 sm:mt-12">
+          <p className="text-sm sm:text-base text-gray-600 mb-4">
             Need a custom solution? Contact us for a personalized quote.
           </p>
           <button className="px-6 sm:px-8 py-3 sm:py-4 bg-green-500 text-white hover:bg-green-600 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-colors">
