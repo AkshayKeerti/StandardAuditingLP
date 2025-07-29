@@ -75,7 +75,7 @@ const ListedAuditors = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Standard Auditing is officially recognized and listed as approved auditors with all major UAE free zones, 
-              chambers of commerce, and federal authorities, ensuring your business receives compliant and recognized services.
+              and federal authorities, ensuring your business receives compliant and recognized services.
             </p>
           </div>
 

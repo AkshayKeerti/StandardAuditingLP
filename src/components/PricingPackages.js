@@ -15,7 +15,7 @@ const PricingPackages = () => {
   }, []);
   const packages = [
     {
-      name: "Corporate Tax – Filing Only",
+      name: "Corporate Tax (Filing Only)",
       price: "AED 750",
       period: "+ VAT",
       color: "bg-red-500",
@@ -29,7 +29,7 @@ const PricingPackages = () => {
       cta: "Get Started"
     },
     {
-      name: "Corporate Tax – Filing + Tax Payable",
+      name: "Corporate Tax (Filing + Tax Payable)",
       price: "AED 1,500",
       period: "+ VAT",
       color: "bg-blue-500",
@@ -53,7 +53,7 @@ const PricingPackages = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-left mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-4 sm:mb-6 text-left">
-            Simple Monthly Plan Tiers
+            Different Packages for Different Businesses
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl text-left">
             Choose the perfect corporate tax solution for your business. All plans include expert UAE tax compliance and ongoing support.

@@ -61,7 +61,7 @@ const Hero = () => {
             {/* 1. Headline + Price as One Visual Unit */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                Corporate TAX/VAT Service
+                Corporate TAX/VAT Services
               </h1>
               
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full text-xl sm:text-2xl font-bold shadow-lg border border-white/30">
