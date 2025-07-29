@@ -52,7 +52,6 @@ function App() {
       <ListedAuditors />
       <GovernmentAgencies />
       <ClientLogos />
-      <CertificationsTrust />
       <Testimonials />
       <FAQ />
       <LeadFormSection />
