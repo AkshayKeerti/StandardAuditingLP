@@ -53,7 +53,6 @@ function App() {
       <GovernmentAgencies />
       <ClientLogos />
       <CertificationsTrust />
-      <RealBusinessImpact />
       <Testimonials />
       <FAQ />
       <LeadFormSection />
