@@ -59,9 +59,9 @@ const RealBusinessImpact = () => {
   ];
 
   return (
-    <section className="section-padding bg-white">
+    <section className="pt-12 lg:pt-16 pb-20 lg:pb-32 px-6 sm:px-6 lg:px-8 bg-white">
       
-      <div className="container-custom px-6 sm:px-6 lg:px-8">
+      <div className="container-custom">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-20">
