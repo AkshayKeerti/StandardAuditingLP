@@ -59,7 +59,7 @@ const RealBusinessImpact = () => {
   ];
 
   return (
-    <section className="pt-12 lg:pt-16 pb-20 lg:pb-32 px-6 sm:px-6 lg:px-8 bg-white">
+    <section className="pt-6 lg:pt-8 pb-20 lg:pb-32 px-6 sm:px-6 lg:px-8 bg-white">
       
       <div className="container-custom">
         <div className="max-w-7xl mx-auto">
