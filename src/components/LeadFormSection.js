@@ -2,202 +2,91 @@ import React from 'react';
 
 const LeadFormSection = () => {
   return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-blue-50 via-blue-100/30 to-indigo-50 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 to-indigo-100/20"></div>
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-200/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}></div>
+      </div>
       
       <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-vigor-green/10 backdrop-blur-sm border border-vigor-green/20 text-vigor-green rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+            <div className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
               <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
               </svg>
               Expert Consultation Available
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight px-2 sm:px-0">
-              Get Your <span className="text-gradient">Free Consultation</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight px-2 sm:px-0">
+              Get Your <span className="text-yellow-300">Free Consultation</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            <p className="text-lg sm:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
               Connect with our certified UAE tax experts for personalized guidance on your business tax strategy. 
               No obligation, completely confidential.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16 lg:gap-20 items-center">
-            {/* Left Content - Enhanced Form */}
+            {/* Left Content - Form matching Hero style */}
             <div className="order-1 lg:order-1">
-              <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 p-6 sm:p-8 lg:p-12 relative overflow-hidden">
-                {/* Form Background Pattern */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-vigor-green/5 rounded-full blur-2xl"></div>
-                <div className="absolute bottom-0 left-0 w-24 h-24 bg-vigor-blue/5 rounded-full blur-2xl"></div>
-                
-                <div className="relative z-10">
-                  <div className="text-center mb-8 sm:mb-10">
-                    <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-vigor-green/10 text-vigor-green rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      Free Consultation
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 space-y-6">
+                <div className="text-center space-y-3">
+                  <div className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                    Free Consultation
+                  </div>
+                  <h3 className="text-xl lg:text-2xl font-bold text-white">
+                    Request a Call Back
+                  </h3>
+                </div>
+
+                <form className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                  />
+                  
+                  <div className="relative">
+                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
+                      <div className="w-6 h-4 bg-red-500 rounded-sm flex items-center justify-center">
+                        <div className="w-4 h-3 bg-yellow-400 rounded-sm flex items-center justify-center">
+                          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        </div>
+                      </div>
                     </div>
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-                      Start Your Tax Strategy
-                    </h3>
-                    <p className="text-gray-600 text-sm sm:text-base">
-                      Get personalized guidance from our UAE tax experts
-                    </p>
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 pl-12 pr-4"
+                    />
                   </div>
 
-                  <form className="space-y-4 sm:space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          First Name *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white text-sm sm:text-base"
-                          placeholder="Enter your first name"
-                        />
-                      </div>
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          Last Name *
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white text-sm sm:text-base"
-                          placeholder="Enter your last name"
-                        />
-                      </div>
-                    </div>
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                  />
 
-                    <div className="group">
-                      <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white text-sm sm:text-base"
-                        placeholder="Enter your company name"
-                      />
-                    </div>
+                  <select className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none">
+                    <option value="">- Select Services -</option>
+                    <option value="bookkeeping">Bookkeeping</option>
+                    <option value="tax-preparation">Tax Preparation</option>
+                    <option value="financial-consulting">Financial Consulting</option>
+                    <option value="audit-services">Audit Services</option>
+                    <option value="payroll-services">Payroll Services</option>
+                  </select>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          Phone Number *
-                        </label>
-                        <div className="relative">
-                          <div className="absolute left-3 sm:left-4 top-1/2 transform -translate-y-1/2 flex items-center space-x-1 sm:space-x-2">
-                            <div className="w-4 h-3 sm:w-6 sm:h-4 bg-gradient-to-r from-red-500 via-green-500 to-black rounded-sm"></div>
-                            <span className="text-gray-500 text-xs sm:text-sm font-medium">+971</span>
-                          </div>
-                          <input
-                            type="tel"
-                            required
-                            className="w-full px-3 sm:px-4 py-3 sm:py-4 pl-16 sm:pl-20 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white text-sm sm:text-base"
-                            placeholder="50 123 4567"
-                          />
-                        </div>
-                      </div>
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          Email Address *
-                        </label>
-                        <input
-                          type="email"
-                          required
-                          className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white text-sm sm:text-base"
-                          placeholder="your@email.com"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          Business Type
-                        </label>
-                        <select className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white appearance-none text-sm sm:text-base">
-                          <option value="">Select business type</option>
-                          <option value="startup">Startup</option>
-                          <option value="sme">SME</option>
-                          <option value="corporate">Corporate</option>
-                          <option value="multinational">Multinational</option>
-                          <option value="ecommerce">E-commerce</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                      <div className="group">
-                        <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                          Services Needed
-                        </label>
-                        <select className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white appearance-none text-sm sm:text-base">
-                          <option value="">Select services</option>
-                          <option value="vat">VAT Registration & Filing</option>
-                          <option value="corporate">Corporate Tax Planning</option>
-                          <option value="compliance">Tax Compliance</option>
-                          <option value="audit">Tax Audit Support</option>
-                          <option value="advisory">Tax Advisory</option>
-                          <option value="multiple">Multiple Services</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="group">
-                      <label className="block text-sm font-semibold text-gray-700 mb-2 sm:mb-3">
-                        Additional Information
-                      </label>
-                      <textarea
-                        rows="4"
-                        className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-vigor-green focus:border-vigor-green transition-all duration-300 bg-gray-50 focus:bg-white resize-none text-sm sm:text-base"
-                        placeholder="Tell us about your specific tax needs or questions..."
-                      ></textarea>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-vigor-green to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 sm:py-5 px-6 sm:px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl text-sm sm:text-base"
-                    >
-                      <div className="flex items-center justify-center space-x-2 sm:space-x-3">
-                        <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span>Get Free Consultation</span>
-                      </div>
-                    </button>
-
-                    <div className="text-center pt-4 sm:pt-6">
-                      <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-6 text-xs sm:text-sm text-gray-500">
-                        <div className="flex items-center space-x-1 sm:space-x-2">
-                          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <span>Free consultation</span>
-                        </div>
-                        <div className="flex items-center space-x-1 sm:space-x-2">
-                          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <span>UAE tax experts</span>
-                        </div>
-                        <div className="flex items-center space-x-1 sm:space-x-2">
-                          <svg className="w-3 h-3 sm:w-4 sm:h-4 text-vigor-green" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                          </svg>
-                          <span>No obligation</span>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
+                  <button 
+                    type="submit"
+                    className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
+                  >
+                    Request a Call Back
+                  </button>
+                </form>
               </div>
             </div>
 
@@ -227,7 +116,7 @@ const LeadFormSection = () => {
                   </div>
                 </div>
                 
-                <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-vigor-green text-white rounded-2xl shadow-xl p-4 sm:p-6 transform rotate-3 z-20">
+                <div className="absolute -top-4 sm:-top-6 -right-4 sm:-right-6 bg-green-600 text-white rounded-2xl shadow-xl p-4 sm:p-6 transform rotate-3 z-20">
                   <div className="text-center">
                     <div className="text-2xl sm:text-3xl font-bold mb-1">1000+</div>
                     <div className="text-xs sm:text-sm font-medium">Happy Clients</div>
