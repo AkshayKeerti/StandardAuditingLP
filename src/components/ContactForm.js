@@ -10,12 +10,8 @@ const ContactForm = () => {
   ];
 
   const services = [
-    "Corporate Tax Registration & Filing",
-    "VAT Registration & Compliance",
-    "Accounting & Bookkeeping",
-    "Business Setup & Licensing",
-    "Audit & Assurance Services",
-    "Tax Advisory & Planning"
+    "Corporate Tax (Filing only)",
+    "Corporate Tax (Filing + Tax Payable)"
   ];
 
   return (

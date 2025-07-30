@@ -160,11 +160,8 @@ const Hero = () => {
 
                 <select className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none">
                   <option value="">- Select Services -</option>
-                  <option value="bookkeeping">Bookkeeping</option>
-                  <option value="tax-preparation">Tax Preparation</option>
-                  <option value="financial-consulting">Financial Consulting</option>
-                  <option value="audit-services">Audit Services</option>
-                  <option value="payroll-services">Payroll Services</option>
+                  <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                  <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
                 </select>
 
                 <button 
