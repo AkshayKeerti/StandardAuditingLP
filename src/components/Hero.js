@@ -137,20 +137,11 @@ const Hero = () => {
                   className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
                 />
                 
-                <div className="relative">
-                  <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center gap-2">
-                    <div className="w-6 h-4 bg-red-500 rounded-sm flex items-center justify-center">
-                      <div className="w-4 h-3 bg-yellow-400 rounded-sm flex items-center justify-center">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 pl-12 pr-4"
-                  />
-                </div>
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                />
 
                 <input
                   type="email"

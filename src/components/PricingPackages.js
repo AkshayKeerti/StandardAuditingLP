@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const PricingPackages = () => {
+const PricingPackages = ({ onPackageSelect }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -13,6 +13,21 @@ const PricingPackages = () => {
 
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
+
+  const handlePackageClick = (packageValue) => {
+    // Call the parent handler to set the selected package
+    onPackageSelect(packageValue);
+    
+    // Scroll to the lead form section
+    const leadFormSection = document.getElementById('lead-form-section');
+    if (leadFormSection) {
+      leadFormSection.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   const packages = [
     {
       name: "Corporate Tax (Filing Only)",
@@ -26,7 +41,8 @@ const PricingPackages = () => {
         "Basic Compliance Check",
         "FTA Portal Review & Submission"
       ],
-      cta: "Get Started"
+      cta: "Get Started",
+      value: "corporate-tax-filing"
     },
     {
       name: "Corporate Tax (Filing + Tax Payable)",
@@ -44,7 +60,8 @@ const PricingPackages = () => {
         "WhatsApp/Email Support"
       ],
       cta: "Choose Growth",
-      popular: true
+      popular: true,
+      value: "corporate-tax-filing-payable"
     }
   ];
 
@@ -101,11 +118,13 @@ const PricingPackages = () => {
 
                 {/* CTA Button */}
                 <div className="p-6 sm:p-8 pt-0 mt-auto">
-                  <button className={`w-full py-3 sm:py-4 px-6 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base h-12 sm:h-14 flex items-center justify-center ${
-                    pkg.popular 
-                      ? 'bg-green-500 text-white hover:bg-green-600 shadow-lg' 
-                      : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
-                  }`}>
+                  <button 
+                    onClick={() => handlePackageClick(pkg.value)}
+                    className={`w-full py-3 sm:py-4 px-6 sm:px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base h-12 sm:h-14 flex items-center justify-center ${
+                      pkg.popular 
+                        ? 'bg-green-500 text-white hover:bg-green-600 shadow-lg' 
+                        : 'bg-gray-100 text-blue-600 hover:bg-gray-200'
+                    }`}>
                     {pkg.cta}
                   </button>
                 </div>

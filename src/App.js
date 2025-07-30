@@ -16,6 +16,7 @@ import ContactPopup from './components/ContactPopup';
 function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [hasShownPopup, setHasShownPopup] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState('');
 
   useEffect(() => {
     // Check if popup has been shown before (using localStorage)
@@ -44,17 +45,21 @@ function App() {
     // You can add your API call or form submission logic here
   };
 
+  const handlePackageSelect = (packageValue) => {
+    setSelectedPackage(packageValue);
+  };
+
   return (
     <div className="App">
       <Header />
       <Hero />
-      <PricingPackages />
+      <PricingPackages onPackageSelect={handlePackageSelect} />
       <ListedAuditors />
       <GovernmentAgencies />
       <ClientLogos />
       <Testimonials />
       <FAQ />
-      <LeadFormSection />
+      <LeadFormSection selectedPackage={selectedPackage} />
       <Footer />
       
       <ContactPopup 
