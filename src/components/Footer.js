@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Footer = () => {
-  const quickLinks = ["Home", "About us", "Services", "Contact us"];
+  const quickLinks = [
+    { name: "Home", url: "https://standardauditors.com/" },
+    { name: "About us", url: "https://standardauditors.com/about-us/" },
+    { name: "Services", url: "https://standardauditors.com/services-in-uae/" },
+    { name: "Contact us", url: "https://standardauditors.com/contact-us/" }
+  ];
 
   return (
     <footer className="bg-white text-gray-800">
@@ -75,10 +80,13 @@ const Footer = () => {
               {quickLinks.map((link, index) => (
                 <a
                   key={index}
-                  href={`#${link.toLowerCase().replace(' ', '-')}`}
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-primary transition-colors"
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-xs sm:text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                  title={`Visit ${link.name} page`}
                 >
-                  {link}
+                  {link.name}
                 </a>
               ))}
             </div>
