@@ -78,16 +78,19 @@ const Header = () => {
             <div className="lg:hidden space-y-4">
               <button 
                 onClick={handleWhatsAppClick}
-                className="flex items-center space-x-4 hover:bg-green-50 rounded-lg p-3 transition-colors duration-200 cursor-pointer group w-full"
+                className="flex items-center space-x-4 hover:bg-green-50 rounded-xl p-3 transition-colors duration-200 cursor-pointer group w-full"
               >
                 <div className="flex items-center justify-center w-12 h-12 bg-green-50 group-hover:bg-green-100 rounded-full transition-colors duration-200">
                   <img src="/whatsapp-1.png" alt="WhatsApp" className="w-6 h-6" />
                 </div>
-                <span className="text-lg font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
+                <div className="flex flex-col">
+                  <span className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
+                  <span className="text-xs text-green-600 font-medium">WhatsApp</span>
+                </div>
               </button>
               <button 
                 onClick={handleEmailClick}
-                className="flex items-center space-x-4 hover:bg-blue-50 rounded-lg p-3 transition-colors duration-200 cursor-pointer group w-full"
+                className="flex items-center space-x-4 hover:bg-blue-50 rounded-xl p-3 transition-colors duration-200 cursor-pointer group w-full"
               >
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-50 group-hover:bg-blue-100 rounded-full transition-colors duration-200">
                   <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -95,7 +98,10 @@ const Header = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                 </div>
-                <span className="text-lg font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Sales@standardauditors.com</span>
+                <div className="flex flex-col">
+                  <span className="text-base font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-200 leading-tight">Sales@standardauditors.com</span>
+                  <span className="text-xs text-blue-600 font-medium">Email</span>
+                </div>
               </button>
             </div>
           </div>
