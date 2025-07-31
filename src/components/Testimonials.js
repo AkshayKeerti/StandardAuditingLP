@@ -28,24 +28,21 @@ const Testimonials = () => {
     },
     {
       name: "Ramamoorthy Ponnusamy",
-      position: "Client",
-      company: "Long-term Client",
+      company: "Carl Stahl",
       quote: "We appointed Standard Auditors 10 years ago, and they are very knowledgeable, providing financial reports on schedule. Whenever we need clarification, they answer quickly and provide a solution, we always suggest Standard Auditors for any professional task.",
       rating: 5,
       image: "👨‍💼"
     },
     {
       name: "Mayur Prabhu Melanaturu",
-      position: "Client",
-      company: "Professional Services",
+      company: "TD Williamson",
       quote: "Standard Auditing performs quality audits and maintains the highest standards of professionalism. Their long-standing relationship with their clients and a presence for more than a decade is a testimony of their efficiency and quality of audit.",
       rating: 5,
       image: "👨‍💼"
     },
     {
       name: "Nawshadarakkal Arakkal",
-      position: "Client",
-      company: "Business Owner",
+      company: "Broadway",
       quote: "Good Auditor and very reliable.",
       rating: 5,
       image: "👨‍💼"
