@@ -133,10 +133,22 @@ const Hero = () => {
             </button>
           </div>
           
-          {/* Right Form */}
+          {/* Right Form with Integrated Image */}
           <div className="lg:col-span-2">
-            <div className="flex justify-center lg:justify-end">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 space-y-6 max-w-md">
+            <div className="grid lg:grid-cols-2 gap-6 items-center">
+              {/* Image */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="relative">
+                  <img
+                    src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
+                    alt="Professional woman in business attire"
+                    className="w-full h-auto object-cover max-w-xs lg:max-w-sm"
+                  />
+                </div>
+              </div>
+
+              {/* Form */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 space-y-6">
                 <div className="text-center space-y-3">
                   <div className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
                     Free Consultation
@@ -203,25 +215,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        {/* Absolutely positioned image for desktop */}
-        <div className="hidden lg:block absolute bottom-0 right-0 z-20" style={{ right: '500px' }}>
-          <img
-            src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
-            alt="Professional woman in business attire"
-            className="h-auto object-contain"
-            style={{ maxHeight: '85%', maxWidth: '350px' }}
-          />
-        </div>
-        
-        {/* Mobile image */}
-        <div className="lg:hidden flex justify-center mt-8">
-          <img
-            src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
-            alt="Professional woman in business attire"
-            className="w-full h-auto object-cover max-w-xs"
-          />
         </div>
       </div>
       
