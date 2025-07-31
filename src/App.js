@@ -56,7 +56,7 @@ function App() {
       <PricingPackages onPackageSelect={handlePackageSelect} />
       <ListedAuditors />
       <GovernmentAgencies />
-      <ClientLogos />
+      <RealBusinessImpact />
       <Testimonials />
       <FAQ />
       <LeadFormSection selectedPackage={selectedPackage} />
