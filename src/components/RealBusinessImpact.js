@@ -1,29 +1,8 @@
 import React from 'react';
 
 const RealBusinessImpact = () => {
-  const businessCases = [
-    {
-      company: "Retail Group",
-      impact: "Avoided AED 150K in penalties",
-      description: "through audit-ready documentation",
-      icon: "🛍️",
-      category: "Penalty Prevention"
-    },
-    {
-      company: "Tech Startup",
-      impact: "Improved cash flow by 12%",
-      description: "by claiming overlooked deductions",
-      icon: "🚀",
-      category: "Cash Flow Optimization"
-    },
-    {
-      company: "Multinational Firm",
-      impact: "Reduced audit exposure",
-      description: "by aligning transfer pricing strategy",
-      icon: "🌍",
-      category: "Risk Mitigation"
-    }
-  ];
+
+
 
   const processSteps = [
     {
@@ -69,64 +48,22 @@ const RealBusinessImpact = () => {
               <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              Proven Results
+              Process Driven
             </div>
             
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Real Business Impact
+              Our Process: Built to Keep You Compliant
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              See how we've helped businesses across the UAE achieve compliance, 
-              optimize their tax position, and avoid costly penalties.
+            Every step is handled by certified tax professionals who keep your business ahead of deadlines, 
+            errors, and regulatory curveballs.
             </p>
           </div>
 
-          {/* Business Impact Cases */}
-          <div className="mb-24">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {businessCases.map((case_, index) => (
-                <div key={index} className="group relative">
-                  <div className="bg-white rounded-2xl p-8 border border-gray-200 hover:bg-gray-50 transition-all duration-500 transform hover:-translate-y-2 h-full shadow-lg">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-4xl">{case_.icon}</div>
-                      <span className="px-3 py-1 bg-vigor-green/20 text-vigor-green text-xs font-semibold rounded-full">
-                        {case_.category}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                      {case_.company}
-                    </h3>
-                    <div className="mb-4">
-                      <div className="text-xl font-bold text-vigor-green mb-2">
-                        {case_.impact}
-                      </div>
-                      <p className="text-gray-600 leading-relaxed">
-                        {case_.description}
-                      </p>
-                    </div>
-                    <div className="flex items-center text-vigor-green">
-                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="font-semibold">Verified Result</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           {/* Process Section */}
           <div className="mb-20">
-            <div className="text-center mb-16">
-              <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Our Process: Built to Keep You Compliant
-              </h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Every step is handled by certified tax professionals who keep your business ahead of deadlines, 
-                errors, and regulatory curveballs.
-              </p>
-            </div>
 
             {/* Process Flow */}
             <div className="relative">
