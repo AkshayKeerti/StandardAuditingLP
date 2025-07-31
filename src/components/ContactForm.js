@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import GoogleFormHandler from './GoogleFormHandler';
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: ''
+  });
+
   const businessSizes = [
     "Startup (1-10 employees)",
     "Small Business (11-50 employees)",
@@ -13,6 +21,36 @@ const ContactForm = () => {
     "Corporate Tax (Filing only)",
     "Corporate Tax (Filing + Tax Payable)"
   ];
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleServiceChange = (service, checked) => {
+    if (checked) {
+      setFormData(prev => ({
+        ...prev,
+        service: service
+      }));
+    }
+  };
+
+  const handleSuccess = (data) => {
+    // Reset form on success
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      service: ''
+    });
+  };
+
+  const handleError = (errors) => {
+    console.log('Form submission errors:', errors);
+  };
 
   return (
     <section id="contact-form" className="section-padding bg-white">
@@ -32,102 +70,121 @@ const ContactForm = () => {
           <div className="bg-gray-light rounded-2xl p-8 lg:p-12">
             <h3 className="text-2xl font-bold text-gray-dark mb-6">Contact Information</h3>
             
-            <form className="space-y-6">
-              {/* Name and Phone */}
-              <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                  <label className="block text-sm font-medium text-gray-dark mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
-                    placeholder="Enter your full name"
-                    />
-                  </div>
-                  
-                <div>
-                  <label className="block text-sm font-medium text-gray-dark mb-2">Phone Number *</label>
-                  <div className="relative">
-                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
-                      <div className="w-6 h-4 bg-gradient-to-r from-red-500 via-green-500 to-black rounded-sm"></div>
-                      <span className="text-sm text-gray-custom">+971</span>
-                    </div>
-                    <input
-                      type="tel"
-                      required
-                      className="w-full px-4 py-3 pl-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
-                      placeholder="50 123 4567"
-                    />
-                  </div>
-                  </div>
-                </div>
-                
-              {/* Email and Business Size */}
-              <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                  <label className="block text-sm font-medium text-gray-dark mb-2">Email Address *</label>
-                    <input
-                      type="email"
-                      required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
-                    placeholder="your@email.com"
-                    />
-                  </div>
-                  
-                <div>
-                  <label className="block text-sm font-medium text-gray-dark mb-2">Business Size *</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none transition-all duration-300">
-                    <option value="">Select business size</option>
-                      {businessSizes.map((size, index) => (
-                        <option key={index} value={size}>{size}</option>
-                      ))}
-                    </select>
-                    <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                    <svg className="w-4 h-4 text-gray-custom" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-              {/* Services Needed */}
-              <div>
-                <label className="block text-sm font-medium text-gray-dark mb-2">Services Needed</label>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {services.map((service, index) => (
-                    <label key={index} className="flex items-center space-x-3 cursor-pointer">
+            <GoogleFormHandler 
+              formData={formData}
+              onSuccess={handleSuccess}
+              onError={handleError}
+              showSuccessMessage={true}
+              showErrorMessage={true}
+            >
+              <div className="space-y-6">
+                {/* Name and Phone */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                    <label className="block text-sm font-medium text-gray-dark mb-2">Full Name *</label>
                       <input
-                        type="checkbox"
-                        className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
+                      placeholder="Enter your full name"
                       />
-                      <span className="text-sm text-gray-custom">{service}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
+                    </div>
+                    
+                  <div>
+                    <label className="block text-sm font-medium text-gray-dark mb-2">Phone Number *</label>
+                    <div className="relative">
+                      <div className="absolute left-3 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
+                        <div className="w-6 h-4 bg-gradient-to-r from-red-500 via-green-500 to-black rounded-sm"></div>
+                        <span className="text-sm text-gray-custom">+971</span>
+                      </div>
+                      <input
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className="w-full px-4 py-3 pl-20 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
+                        placeholder="50 123 4567"
+                      />
+                    </div>
+                    </div>
+                  </div>
+                  
+                {/* Email and Business Size */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                    <label className="block text-sm font-medium text-gray-dark mb-2">Email Address *</label>
+                      <input
+                        type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
+                      placeholder="your@email.com"
+                      />
+                    </div>
+                    
+                  <div>
+                    <label className="block text-sm font-medium text-gray-dark mb-2">Business Size *</label>
+                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white appearance-none transition-all duration-300">
+                      <option value="">Select business size</option>
+                        {businessSizes.map((size, index) => (
+                          <option key={index} value={size}>{size}</option>
+                        ))}
+                      </select>
+                      <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                      <svg className="w-4 h-4 text-gray-custom" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
 
-              {/* Message */}
+                {/* Services Needed */}
                 <div>
-                <label className="block text-sm font-medium text-gray-dark mb-2">Additional Information</label>
-                  <textarea
-                    rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
-                  placeholder="Tell us about your specific needs or questions..."
-                  ></textarea>
+                  <label className="block text-sm font-medium text-gray-dark mb-2">Services Needed *</label>
+                  <div className="grid md:grid-cols-2 gap-3">
+                    {services.map((service, index) => (
+                      <label key={index} className="flex items-center space-x-3 cursor-pointer">
+                        <input
+                          type="radio"
+                          name="service"
+                          value={service}
+                          checked={formData.service === service}
+                          onChange={(e) => handleServiceChange(service, e.target.checked)}
+                          className="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary"
+                          required
+                        />
+                        <span className="text-sm text-gray-custom">{service}</span>
+                      </label>
+                    ))}
+                  </div>
                 </div>
-                
-                {/* Submit Button */}
-                  <button
-                    type="submit"
-                className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-custom"
-                  >
-                Get Free Consultation
-                  </button>
 
-              <p className="text-xs text-gray-custom text-center">
-                ✓ Free consultation ✓ UAE tax experts ✓ No obligation ✓ 24-hour response
-              </p>
-            </form>
+                {/* Message */}
+                  <div>
+                  <label className="block text-sm font-medium text-gray-dark mb-2">Additional Information</label>
+                    <textarea
+                      rows="4"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent bg-white transition-all duration-300"
+                    placeholder="Tell us about your specific needs or questions..."
+                    ></textarea>
+                  </div>
+                  
+                  {/* Submit Button */}
+                    <button
+                      type="submit"
+                  className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-custom"
+                    >
+                  Get Free Consultation
+                    </button>
+
+                <p className="text-xs text-gray-custom text-center">
+                  ✓ Free consultation ✓ UAE tax experts ✓ No obligation ✓ 24-hour response
+                </p>
+              </div>
+            </GoogleFormHandler>
           </div>
 
           {/* Right Column - Information */}

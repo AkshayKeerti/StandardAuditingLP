@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ContactPopup from './ContactPopup';
+import GoogleFormHandler from './GoogleFormHandler';
 
 const Hero = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [hasInteracted, setHasInteracted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: ''
+  });
 
   // Auto-show popup after 3 seconds of inactivity
   useEffect(() => {
@@ -32,10 +39,31 @@ const Hero = () => {
     };
   }, [hasInteracted]);
 
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
   const handleSubmit = (phoneNumber) => {
     // Handle the phone number submission here
     console.log('Phone number submitted:', phoneNumber);
     // You can add your logic here to send the phone number to your backend
+  };
+
+  const handleFormSuccess = (data) => {
+    // Reset form on success
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      service: ''
+    });
+  };
+
+  const handleFormError = (errors) => {
+    console.log('Form submission errors:', errors);
   };
 
   const benefits = [
@@ -121,52 +149,74 @@ const Hero = () => {
 
               {/* Form */}
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 space-y-6">
-              <div className="text-center space-y-3">
-                <div className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
-                  Free Consultation
+                <div className="text-center space-y-3">
+                  <div className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+                    Free Consultation
+                  </div>
+                  <h2 className="text-xl lg:text-2xl font-bold text-white">
+                    Request a Call Back
+                  </h2>
                 </div>
-                <h2 className="text-xl lg:text-2xl font-bold text-white">
-                  Request a Call Back
-                </h2>
-              </div>
 
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
-                
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
-
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
-
-                <select className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none">
-                  <option value="">- Select Services -</option>
-                  <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
-                  <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
-                </select>
-
-                <button 
-                  type="submit"
-                  className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
+                <GoogleFormHandler 
+                  formData={formData}
+                  onSuccess={handleFormSuccess}
+                  onError={handleFormError}
+                  showSuccessMessage={true}
+                  showErrorMessage={true}
                 >
-                  Request a Call Back
-                </button>
-              </form>
+                  <div className="space-y-4">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      required
+                    />
+                    
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      required
+                    />
+
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      required
+                    />
+
+                    <select 
+                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none"
+                      value={formData.service}
+                      onChange={(e) => handleInputChange('service', e.target.value)}
+                      required
+                    >
+                      <option value="">- Select Services -</option>
+                      <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                      <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                    </select>
+
+                    <button 
+                      type="submit"
+                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
+                    >
+                      Request a Call Back
+                    </button>
+                  </div>
+                </GoogleFormHandler>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
       
       {/* Contact Popup */}
       <ContactPopup 

@@ -1,21 +1,35 @@
 import React, { useState } from 'react';
+import GoogleFormHandler from './GoogleFormHandler';
 
 const ContactPopup = ({ isOpen, onClose, onSubmit }) => {
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    phone: ''
+  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (phoneNumber.trim()) {
-      setIsSubmitting(true);
-      // Simulate API call
-      setTimeout(() => {
-        onSubmit(phoneNumber);
-        setPhoneNumber('');
-        setIsSubmitting(false);
-        onClose();
-      }, 1000);
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleSuccess = (data) => {
+    // Reset form on success
+    setFormData({
+      phone: ''
+    });
+    
+    // Call the original onSubmit callback if provided
+    if (onSubmit) {
+      onSubmit(data.phone);
     }
+    
+    // Close the popup
+    onClose();
+  };
+
+  const handleError = (errors) => {
+    console.log('Form submission errors:', errors);
   };
 
   if (!isOpen) return null;
@@ -58,50 +72,45 @@ const ContactPopup = ({ isOpen, onClose, onSubmit }) => {
             </p>
           </div>
           
-          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number
-              </label>
-              <div className="relative">
-                <input
-                  type="tel"
-                  value={phoneNumber}
-                  onChange={(e) => setPhoneNumber(e.target.value)}
-                  placeholder="Enter your phone number"
-                  className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base sm:text-lg transition-all duration-300 bg-gray-50 hover:bg-white"
-                  required
-                  autoFocus
-                />
+          <GoogleFormHandler 
+            formData={formData}
+            onSuccess={handleSuccess}
+            onError={handleError}
+            showSuccessMessage={false}
+            showErrorMessage={true}
+          >
+            <div className="space-y-4 sm:space-y-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number
+                </label>
+                <div className="relative">
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    placeholder="Enter your phone number"
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base sm:text-lg transition-all duration-300 bg-gray-50 hover:bg-white"
+                    required
+                    autoFocus
+                  />
+                </div>
+                <p className="text-xs text-gray-500 mt-2">
+                  We'll never share your number with third parties
+                </p>
               </div>
-              <p className="text-xs text-gray-500 mt-2">
-                We'll never share your number with third parties
-              </p>
+              
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-sm sm:text-base"
+              >
+                <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <span>Call Me Now - It's Free!</span>
+              </button>
             </div>
-            
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 text-sm sm:text-base"
-            >
-              {isSubmitting ? (
-                <>
-                  <svg className="animate-spin -ml-1 mr-2 sm:mr-3 h-4 w-4 sm:h-5 sm:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  <span>Calling you soon...</span>
-                </>
-              ) : (
-                <>
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                  </svg>
-                  <span>Call Me Now - It's Free!</span>
-                </>
-              )}
-            </button>
-          </form>
+          </GoogleFormHandler>
           
           {/* Trust indicators */}
           <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-100">

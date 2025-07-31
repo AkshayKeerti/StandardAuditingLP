@@ -1,6 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import GoogleFormHandler from './GoogleFormHandler';
 
 const LeadFormSection = ({ selectedPackage }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    service: selectedPackage || ''
+  });
+
+  const handleInputChange = (field, value) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleSuccess = (data) => {
+    // Reset form on success
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      service: ''
+    });
+  };
+
+  const handleError = (errors) => {
+    console.log('Form submission errors:', errors);
+  };
+
   return (
     <section id="lead-form-section" className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
       {/* Background Pattern */}
@@ -37,44 +66,60 @@ const LeadFormSection = ({ selectedPackage }) => {
                 </h2>
               </div>
 
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
-                
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
+              <GoogleFormHandler 
+                formData={formData}
+                onSuccess={handleSuccess}
+                onError={handleError}
+                showSuccessMessage={true}
+                showErrorMessage={true}
+              >
+                <div className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                    required
+                  />
+                  
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                    required
+                  />
 
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
-                />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                    required
+                  />
 
-                <select 
-                  className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none"
-                  value={selectedPackage}
-                  onChange={(e) => {
-                    // This will be handled by the parent component if needed
-                  }}
-                >
-                  <option value="">- Select Services -</option>
-                  <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
-                  <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
-                </select>
+                  <select 
+                    className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none"
+                    value={formData.service}
+                    onChange={(e) => handleInputChange('service', e.target.value)}
+                    required
+                  >
+                    <option value="">- Select Services -</option>
+                    <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                    <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                  </select>
 
-                <button 
-                  type="submit"
-                  className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
-                >
-                  Request a Call Back
-                </button>
-              </form>
+                  <button 
+                    type="submit"
+                    className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
+                  >
+                    Request a Call Back
+                  </button>
+                </div>
+              </GoogleFormHandler>
             </div>
           </div>
           
