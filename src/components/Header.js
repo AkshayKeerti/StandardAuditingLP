@@ -83,7 +83,7 @@ const Header = () => {
                 <div className="flex items-center justify-center w-8 h-8 bg-green-50 group-hover:bg-green-100 rounded-full transition-colors duration-200">
                   <img src="/whatsapp-1.png" alt="WhatsApp" className="w-4 h-4" />
                 </div>
-                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
+                <span className="text-[1.1rem] sm:text-sm font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
               </button>
               <button 
                 onClick={handleEmailClick}
@@ -95,7 +95,7 @@ const Header = () => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                 </div>
-                <span className="text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Sales@standardauditors.com</span>
+                <span className="text-[1.1rem] sm:text-sm font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Sales@standardauditors.com</span>
               </button>
             </div>
           </div>
