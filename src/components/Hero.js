@@ -116,8 +116,8 @@ const Hero = () => {
               </h2>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-4 h-4 flex-shrink-0 bg-white rounded-full flex items-center justify-center">
-                    <Check className="w-3 h-3" style={{ color: '#2563eb' }} />
+                  <div className="w-6 h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
+                    <Check className="w-4 h-4 text-blue-600" />
                   </div>
                   <span className="text-base">{benefit}</span>
                 </div>
