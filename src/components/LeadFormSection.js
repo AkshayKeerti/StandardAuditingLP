@@ -127,7 +127,7 @@ const LeadFormSection = ({ selectedPackage }) => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6">
               <img
-                src="/woman-2.png"
+                src="/Woman-2.png"
                 alt="Professional tax consultation session"
                 className="w-full h-auto object-cover max-w-xs lg:max-w-sm"
               />
