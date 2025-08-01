@@ -87,7 +87,7 @@ const Hero = () => {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-blue-700 to-indigo-800">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -116,9 +116,7 @@ const Hero = () => {
               </h2>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-4 h-4 bg-gray-800 rounded-full flex items-center justify-center">
-                    <Check className="w-2.5 h-2.5 text-white" />
-                  </div>
+                  <Check className="w-4 h-4 flex-shrink-0" style={{ color: '#f8e164' }} />
                   <span className="text-base">{benefit}</span>
                 </div>
               ))}
@@ -126,10 +124,11 @@ const Hero = () => {
             
             <button 
               onClick={() => setShowPopup(true)}
-              className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-lg text-base font-medium transition-colors flex items-center"
+              className="px-6 py-2 rounded-lg text-base font-medium transition-colors flex items-center"
+              style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
             >
               Contact us
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-4 h-4" style={{ color: '#1e3a8a' }} />
             </button>
           </div>
           
