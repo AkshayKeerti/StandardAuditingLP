@@ -95,7 +95,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-32 sm:pt-4 pb-4 sm:pb-0 flex items-center">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-32 sm:pt-4 pb-20 sm:pb-4 flex items-center">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full">
           {/* Left Column - Content & Benefits */}
           <div className="lg:col-span-1 text-white space-y-6">
