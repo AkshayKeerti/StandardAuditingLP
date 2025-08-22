@@ -97,12 +97,12 @@ const Hero = () => {
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-4 pb-20 sm:pb-4 flex items-center">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full">
-          {/* Left Column - Content & Benefits */}
+          {/* Left Column - Content & Benefits with Image on small screens */}
           <div className="lg:col-span-1 text-white space-y-3 xs:space-y-4 sm:space-y-6">
             <div className="space-y-2.5 xs:space-y-3 sm:space-y-4">
               <h1 className="text-[22px] xs:text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-tight">
                 Corporate TAX/VAT Services
-            got  </h1>
+              </h1>
               
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-2 xs:px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-bold shadow-lg border border-white/30">
                 <span className="mr-1.5 sm:mr-2">Starting at</span>
@@ -132,24 +132,35 @@ const Hero = () => {
               Contact us
               <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
             </button>
+
+            {/* Image - Only visible on small screens, next to bullet points */}
+            <div className="lg:hidden flex justify-center">
+              <div className="relative">
+                <img
+                  src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
+                  alt="Professional woman in business attire"
+                  className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px]"
+                />
+              </div>
+            </div>
           </div>
           
-          {/* Right Form with Integrated Image */}
+          {/* Right Form - Full width on small screens, with image on larger screens */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
-              {/* Image */}
-              <div className="flex justify-center lg:justify-end order-2 lg:order-1">
+            <div className="grid lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
+              {/* Image - Only visible on larger screens (lg and up) */}
+              <div className="hidden lg:flex justify-center lg:justify-end order-2 lg:order-1">
                 <div className="relative">
                   <img
                     src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
                     alt="Professional woman in business attire"
-                    className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px] lg:max-w-sm"
+                    className="w-full h-auto object-cover max-w-sm"
                   />
                 </div>
               </div>
 
-              {/* Form */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2">
+              {/* Form - Full width on small screens */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2 lg:col-span-1">
                 <div className="text-center space-y-2 sm:space-y-3">
                   <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                     Free Consultation
