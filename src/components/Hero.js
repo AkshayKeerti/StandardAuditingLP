@@ -114,7 +114,7 @@ const Hero = () => {
               <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-semibold text-white mb-2.5 xs:mb-3 sm:mb-4">
                 25+ years of expertise in:
               </h2>
-              <div className="grid grid-cols-2 gap-2 xs:gap-3 sm:gap-4 items-start">
+              <div className="grid grid-cols-2 gap-2 xs:gap-3 sm:gap-4 items-start xs:hidden">
                 <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
@@ -135,6 +135,16 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
+              <div className="hidden xs:block space-y-2 xs:space-y-2.5 sm:space-y-3">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
+                    <div className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
+                      <Check className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-blue-600" />
+                    </div>
+                    <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             
             <button 
@@ -147,72 +157,86 @@ const Hero = () => {
             </button>
           </div>
           
-          {/* Right Form */}
+          {/* Right Form with Integrated Image */}
           <div className="lg:col-span-2">
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6">
-              <div className="text-center space-y-2 sm:space-y-3">
-                <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
-                  Free Consultation
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
+              {/* Image - Hidden on xs screens and above, shown on mobile */}
+              <div className="flex justify-center lg:justify-end order-2 lg:order-1 hidden xs:block">
+                <div className="relative">
+                  <img
+                    src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
+                    alt="Professional woman in business attire"
+                    className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px] lg:max-w-sm"
+                  />
                 </div>
-                <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-bold text-white">
-                  Request a Call Back
-                </h2>
               </div>
 
-              <GoogleFormHandler 
-                formData={formData}
-                onSuccess={handleFormSuccess}
-                onError={handleFormError}
-                showSuccessMessage={true}
-                showErrorMessage={true}
-              >
-                <div className="space-y-2 xs:space-y-2.5 sm:space-y-3 lg:space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                    required
-                  />
-                  
-                  <input
-                    type="tel"
-                    placeholder="Phone Number"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                    required
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                    required
-                  />
-
-                  <select 
-                    className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 appearance-none text-xs xs:text-sm sm:text-base"
-                    value={formData.service}
-                    onChange={(e) => handleInputChange('service', e.target.value)}
-                    required
-                  >
-                    <option value="">- Select Services -</option>
-                    <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
-                    <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
-                  </select>
-
-                  <button 
-                    type="submit"
-                    className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 text-xs xs:text-sm sm:text-base lg:text-lg font-medium transition-colors"
-                  >
+              {/* Form */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2">
+                <div className="text-center space-y-2 sm:space-y-3">
+                  <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
+                    Free Consultation
+                  </div>
+                  <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-bold text-white">
                     Request a Call Back
-                  </button>
+                  </h2>
                 </div>
-              </GoogleFormHandler>
+
+                <GoogleFormHandler 
+                  formData={formData}
+                  onSuccess={handleFormSuccess}
+                  onError={handleFormError}
+                  showSuccessMessage={true}
+                  showErrorMessage={true}
+                >
+                  <div className="space-y-2 xs:space-y-2.5 sm:space-y-3 lg:space-y-4">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                      required
+                    />
+                    
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                      required
+                    />
+
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                      required
+                    />
+
+                    <select 
+                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 appearance-none text-xs xs:text-sm sm:text-base"
+                      value={formData.service}
+                      onChange={(e) => handleInputChange('service', e.target.value)}
+                      required
+                    >
+                      <option value="">- Select Services -</option>
+                      <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                      <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                    </select>
+
+                    <button 
+                      type="submit"
+                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 text-xs xs:text-sm sm:text-base lg:text-lg font-medium transition-colors"
+                    >
+                      Request a Call Back
+                    </button>
+                  </div>
+                </GoogleFormHandler>
+              </div>
             </div>
           </div>
         </div>
