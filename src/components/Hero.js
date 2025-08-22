@@ -102,7 +102,7 @@ const Hero = () => {
             <div className="space-y-2.5 xs:space-y-3 sm:space-y-4">
               <h1 className="text-[22px] xs:text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-tight">
                 Corporate TAX/VAT Services
-              </h1>
+            got  </h1>
               
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-2 xs:px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-bold shadow-lg border border-white/30">
                 <span className="mr-1.5 sm:mr-2">Starting at</span>
