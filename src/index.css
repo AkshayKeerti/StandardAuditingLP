@@ -180,4 +180,61 @@
   .mobile-button {
     @apply w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300;
   }
+
+  /* Extra small screen utilities (less than 400px) */
+  .xs-text-xs {
+    @apply text-xs;
+  }
+  
+  .xs-text-sm {
+    @apply text-sm;
+  }
+  
+  .xs-px-2 {
+    @apply px-2;
+  }
+  
+  .xs-px-3 {
+    @apply px-3;
+  }
+  
+  .xs-py-1 {
+    @apply py-1;
+  }
+  
+  .xs-py-2 {
+    @apply py-2;
+  }
+  
+  .xs-gap-2 {
+    @apply gap-2;
+  }
+  
+  .xs-gap-3 {
+    @apply gap-3;
+  }
+  
+  .xs-space-y-2 {
+    @apply space-y-2;
+  }
+  
+  .xs-space-y-3 {
+    @apply space-y-3;
+  }
+  
+  .xs-w-4 {
+    @apply w-4;
+  }
+  
+  .xs-h-4 {
+    @apply h-4;
+  }
+  
+  .xs-max-w-100 {
+    max-width: 100px;
+  }
+  
+  .xs-max-w-120 {
+    max-width: 120px;
+  }
 } 

@@ -98,63 +98,63 @@ const Hero = () => {
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-4 pb-20 sm:pb-4 flex items-center">
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full">
           {/* Left Column - Content & Benefits */}
-          <div className="lg:col-span-1 text-white space-y-6">
-            <div className="space-y-4">
-              <h1 className="text-[32px] font-bold leading-tight">
+          <div className="lg:col-span-1 text-white space-y-3 xs:space-y-4 sm:space-y-6">
+            <div className="space-y-2.5 xs:space-y-3 sm:space-y-4">
+              <h1 className="text-[22px] xs:text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-tight">
                 Corporate TAX/VAT Services
               </h1>
               
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-base sm:text-lg font-bold shadow-lg border border-white/30">
-                <span className="mr-2">Starting at</span>
+              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-2 xs:px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-bold shadow-lg border border-white/30">
+                <span className="mr-1.5 sm:mr-2">Starting at</span>
                 <span className="text-yellow-300">AED 700</span>
               </div>
             </div>
 
-            <div className="space-y-3">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-white mb-4">
+            <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
+              <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-semibold text-white mb-2.5 xs:mb-3 sm:mb-4">
                 25+ years of expertise in:
               </h2>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
-                    <Check className="w-4 h-4 text-blue-600" />
+                <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
+                  <div className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
+                    <Check className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-blue-600" />
                   </div>
-                  <span className="text-base">{benefit}</span>
+                  <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
                 </div>
               ))}
             </div>
             
             <button 
               onClick={() => setShowPopup(true)}
-              className="px-6 py-2 rounded-lg text-base font-medium transition-colors flex items-center"
+              className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center"
               style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
             >
               Contact us
-              <ArrowRight className="ml-2 w-4 h-4" style={{ color: '#1e3a8a' }} />
+              <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
             </button>
           </div>
           
           {/* Right Form with Integrated Image */}
           <div className="lg:col-span-2">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
               {/* Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="flex justify-center lg:justify-end order-2 lg:order-1">
                 <div className="relative">
                   <img
                     src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
                     alt="Professional woman in business attire"
-                    className="w-full h-auto object-cover max-w-xs lg:max-w-sm"
+                    className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px] lg:max-w-sm"
                   />
                 </div>
               </div>
 
               {/* Form */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 lg:p-8 space-y-6">
-                <div className="text-center space-y-3">
-                  <div className="inline-block bg-white text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2">
+                <div className="text-center space-y-2 sm:space-y-3">
+                  <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
                     Free Consultation
                   </div>
-                  <h2 className="text-xl lg:text-2xl font-bold text-white">
+                  <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-bold text-white">
                     Request a Call Back
                   </h2>
                 </div>
@@ -166,13 +166,13 @@ const Hero = () => {
                   showSuccessMessage={true}
                   showErrorMessage={true}
                 >
-                  <div className="space-y-4">
+                  <div className="space-y-2 xs:space-y-2.5 sm:space-y-3 lg:space-y-4">
                     <input
                       type="text"
                       placeholder="Name"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
                       required
                     />
                     
@@ -181,7 +181,7 @@ const Hero = () => {
                       placeholder="Phone Number"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
                       required
                     />
 
@@ -190,12 +190,12 @@ const Hero = () => {
                       placeholder="Email Address"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-12 px-4"
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
                       required
                     />
 
                     <select 
-                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-12 px-4 appearance-none"
+                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 appearance-none text-xs xs:text-sm sm:text-base"
                       value={formData.service}
                       onChange={(e) => handleInputChange('service', e.target.value)}
                       required
@@ -207,7 +207,7 @@ const Hero = () => {
 
                     <button 
                       type="submit"
-                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-12 text-lg font-medium transition-colors"
+                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 text-xs xs:text-sm sm:text-base lg:text-lg font-medium transition-colors"
                     >
                       Request a Call Back
                     </button>
