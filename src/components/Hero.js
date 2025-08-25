@@ -124,6 +124,16 @@ const Hero = () => {
                       <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
                     </div>
                   ))}
+                  
+                  {/* Contact us button inside the benefits column for mobile */}
+                  <button 
+                    onClick={() => setShowPopup(true)}
+                    className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center mt-3"
+                    style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
+                  >
+                    Contact us
+                    <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
+                  </button>
                 </div>
                 {/* Image appears next to bullet points for devices less than 500px */}
                 <div className="flex justify-center order-2 lg:order-1">
@@ -148,14 +158,17 @@ const Hero = () => {
               </div>
             </div>
             
-            <button 
-              onClick={() => setShowPopup(true)}
-              className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center"
-              style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
-            >
-              Contact us
-              <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
-            </button>
+            {/* Contact us button for xs screens and above */}
+            <div className="hidden xs:block">
+              <button 
+                onClick={() => setShowPopup(true)}
+                className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center"
+                style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
+              >
+                Contact us
+                <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
+              </button>
+            </div>
           </div>
           
           {/* Right Form with Integrated Image */}
