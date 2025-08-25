@@ -125,6 +125,7 @@ const Hero = () => {
                     </div>
                   ))}
                 </div>
+                {/* Image appears next to bullet points for devices less than 500px */}
                 <div className="flex justify-center order-2 lg:order-1">
                   <div className="relative">
                     <img
