@@ -159,9 +159,79 @@ const Hero = () => {
           
           {/* Right Form with Integrated Image */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
+            {/* Mobile Layout: Full width form */}
+            <div className="xs:hidden">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 sm:p-4 space-y-2.5 sm:space-y-3">
+                <div className="text-center space-y-2 sm:space-y-3">
+                  <div className="inline-block bg-white text-blue-600 px-1.5 sm:px-2 py-1 rounded-full text-xs font-semibold">
+                    Free Consultation
+                  </div>
+                  <h2 className="text-sm sm:text-base font-bold text-white">
+                    Request a Call Back
+                  </h2>
+                </div>
+
+                <GoogleFormHandler 
+                  formData={formData}
+                  onSuccess={handleFormSuccess}
+                  onError={handleFormError}
+                  showSuccessMessage={true}
+                  showErrorMessage={true}
+                >
+                  <div className="space-y-2 sm:space-y-2.5">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                      required
+                    />
+                    
+                    <input
+                      type="tel"
+                      placeholder="Phone Number"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                      required
+                    />
+
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                      required
+                    />
+
+                    <select 
+                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 appearance-none text-xs sm:text-sm"
+                      value={formData.service}
+                      onChange={(e) => handleInputChange('service', e.target.value)}
+                      required
+                    >
+                      <option value="">- Select Services -</option>
+                      <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                      <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                    </select>
+
+                    <button 
+                      type="submit"
+                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 sm:h-8 text-xs sm:text-sm font-medium transition-colors"
+                    >
+                      Request a Call Back
+                    </button>
+                  </div>
+                </GoogleFormHandler>
+              </div>
+            </div>
+
+            {/* Desktop Layout: Image + Form side by side */}
+            <div className="hidden xs:grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
               {/* Image - Hidden on xs screens and above, shown on mobile */}
-              <div className="flex justify-center lg:justify-end order-2 lg:order-1 hidden xs:block">
+              <div className="flex justify-center lg:justify-end order-2 lg:order-1">
                 <div className="relative">
                   <img
                     src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
