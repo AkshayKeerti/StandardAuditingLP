@@ -76,27 +76,27 @@ const Header = () => {
 
             {/* Mobile Contact Info */}
             <div className="lg:hidden">
-              <div className="flex flex-wrap gap-1.5 xs:gap-2 justify-center sm:justify-start">
+              <div className="flex gap-1 xs:gap-1.5 justify-center sm:justify-start">
                 <button 
                   onClick={handleWhatsAppClick}
-                  className="flex items-center space-x-1.5 xs:space-x-2 hover:bg-green-50 rounded-lg p-1.5 xs:p-2 transition-colors duration-200 cursor-pointer group"
+                  className="flex items-center space-x-1 hover:bg-green-50 rounded-lg p-1 transition-colors duration-200 cursor-pointer group flex-shrink-0"
                 >
-                  <div className="flex items-center justify-center w-6 h-6 xs:w-7 xs:h-7 bg-green-50 group-hover:bg-green-100 rounded-full transition-colors duration-200">
-                    <img src="/whatsapp-1.png" alt="WhatsApp" className="w-3 h-3 xs:w-3.5 xs:h-3.5" />
+                  <div className="flex items-center justify-center w-5 h-5 bg-green-50 group-hover:bg-green-100 rounded-full transition-colors duration-200">
+                    <img src="/whatsapp-1.png" alt="WhatsApp" className="w-2.5 h-2.5" />
                   </div>
-                  <span className="text-xs font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
+                  <span className="text-[10px] font-semibold text-gray-900 group-hover:text-green-700 transition-colors duration-200">+971 54 211 9784</span>
                 </button>
                 <button 
                   onClick={handleEmailClick}
-                  className="flex items-center space-x-1.5 xs:space-x-2 hover:bg-blue-50 rounded-lg p-1.5 xs:p-2 transition-colors duration-200 cursor-pointer group"
+                  className="flex items-center space-x-1 hover:bg-blue-50 rounded-lg p-1 transition-colors duration-200 cursor-pointer group flex-shrink-0"
                 >
-                  <div className="flex items-center justify-center w-6 h-6 xs:w-7 xs:h-7 bg-blue-50 group-hover:bg-blue-100 rounded-full transition-colors duration-200">
-                    <svg className="w-3 h-3 xs:w-3.5 xs:h-3.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <div className="flex items-center justify-center w-5 h-5 bg-blue-50 group-hover:bg-blue-100 rounded-full transition-colors duration-200">
+                    <svg className="w-2.5 h-2.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
                   </div>
-                  <span className="text-xs font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Sales@standardauditors.com</span>
+                  <span className="text-[10px] font-semibold text-gray-900 group-hover:text-blue-700 transition-colors duration-200">Sales@standardauditors.com</span>
                 </button>
               </div>
             </div>
