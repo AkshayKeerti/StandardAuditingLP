@@ -70,19 +70,12 @@ const Hero = () => {
     "Auditing",
     "Tax Advisory",
     "Accounting & Bookkeeping",
-    "VAT Registration & Filing",
-    "Company Formation"
+    "VAT Registration & Filing"
   ];
 
   const Check = ({ className }) => (
     <svg className={className} fill="currentColor" viewBox="0 0 20 20">
       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-    </svg>
-  );
-
-  const ArrowRight = ({ className }) => (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
     </svg>
   );
 
@@ -95,27 +88,156 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-4 pb-20 sm:pb-4 flex items-center">
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full">
-          {/* Left Column - Content & Benefits */}
-          <div className="lg:col-span-1 text-white space-y-3 xs:space-y-4 sm:space-y-6">
-            <div className="space-y-2.5 xs:space-y-3 sm:space-y-4">
-              <h1 className="text-[22px] xs:text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-tight">
-                Corporate TAX/VAT Services
-              </h1>
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 pt-16 sm:pt-4 pb-20 sm:pb-4">
+        {/* Mobile Layout (under 500px) - Exact wireframe placement */}
+        <div className="block sm:hidden">
+          {/* Header Section */}
+          <div className="flex justify-between items-center mb-4">
+            {/* Logo */}
+            <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2">
+              <img 
+                src="/standard-auditing-logo.png" 
+                alt="Standard Auditing Logo" 
+                className="h-8 w-auto"
+              />
+            </div>
+            
+            {/* Hamburger Menu */}
+            <div className="flex flex-col space-y-1">
+              <div className="w-6 h-0.5 bg-white"></div>
+              <div className="w-6 h-0.5 bg-white"></div>
+              <div className="w-6 h-0.5 bg-white"></div>
+            </div>
+          </div>
+
+          {/* Contact Information Section */}
+          <div className="flex justify-between items-center mb-6">
+            {/* Phone Number */}
+            <div className="flex items-center">
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center mr-2">
+                <svg className="w-3 h-3 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+              </div>
+              <span className="text-white underline text-sm">+971 54211</span>
+            </div>
+            
+            {/* Email */}
+            <span className="text-white underline text-sm">Sales @ Standard</span>
+          </div>
+
+          {/* Main Service Title */}
+          <div className="text-center mb-4">
+            <h1 className="text-2xl font-bold text-white leading-tight">
+              Corporate TAX/VAT Services
+            </h1>
+          </div>
+
+          {/* Pricing */}
+          <div className="text-center mb-6">
+            <span className="text-white underline text-lg">Starting at AED 700</span>
+          </div>
+
+          {/* Features and Image Section */}
+          <div className="flex justify-between items-start mb-6">
+            {/* Left Side - Experience and Benefits */}
+            <div className="flex-1 mr-4">
+              {/* Experience */}
+              <div className="text-white text-sm mb-3">25+ yrs of Exp</div>
               
-              <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-2 xs:px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-bold shadow-lg border border-white/30">
-                <span className="mr-1.5 sm:mr-2">Starting at</span>
-                <span className="text-yellow-300">AED 700</span>
+              {/* Bullet Points */}
+              <div className="space-y-2">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center">
+                    <span className="text-yellow-300 mr-2">*</span>
+                    <span className="text-white text-xs">{benefit}</span>
+                  </div>
+                ))}
               </div>
             </div>
+            
+            {/* Right Side - Image */}
+            <div className="flex-shrink-0">
+              <img
+                src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
+                alt="Professional woman in business attire"
+                className="w-20 h-20 object-cover rounded-lg"
+              />
+            </div>
+          </div>
 
-            <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
-              <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-semibold text-white mb-2.5 xs:mb-3 sm:mb-4">
-                25+ years of expertise in:
-              </h2>
-              <div className="grid grid-cols-2 gap-2 xs:gap-3 sm:gap-4 items-start xs:hidden">
-                <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
+          {/* Primary CTA Button */}
+          <div className="text-center mb-6">
+            <button 
+              onClick={() => setShowPopup(true)}
+              className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold py-3 px-6 rounded-full text-sm transition-colors"
+            >
+              SPEAK TO TAX SPECIALIST
+            </button>
+          </div>
+
+          {/* Certification Section */}
+          <div className="text-center space-y-2">
+            <div className="text-white text-sm">Certified Agency</div>
+            <div className="text-white text-sm">Federal Tax Auditor</div>
+          </div>
+        </div>
+
+        {/* Desktop Layout (500px and above) - Original design */}
+        <div className="hidden sm:block">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center w-full">
+            {/* Left Column - Content & Benefits */}
+            <div className="lg:col-span-1 text-white space-y-3 xs:space-y-4 sm:space-y-6">
+              <div className="space-y-2.5 xs:space-y-3 sm:space-y-4">
+                <h1 className="text-[22px] xs:text-[24px] sm:text-[28px] lg:text-[32px] font-bold leading-tight">
+                  Corporate TAX/VAT Services
+                </h1>
+                
+                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-2 xs:px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs xs:text-sm sm:text-base font-bold shadow-lg border border-white/30">
+                  <span className="mr-1.5 sm:mr-2">Starting at</span>
+                  <span className="text-yellow-300">AED 700</span>
+                </div>
+              </div>
+
+              <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
+                <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-semibold text-white mb-2.5 xs:mb-3 sm:mb-4">
+                  25+ years of expertise in:
+                </h2>
+                <div className="grid grid-cols-2 gap-2 xs:gap-3 sm:gap-4 items-start xs:hidden">
+                  <div className="space-y-2 xs:space-y-2.5 sm:space-y-3">
+                    {benefits.map((benefit, index) => (
+                      <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
+                        <div className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
+                          <Check className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-blue-600" />
+                        </div>
+                        <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
+                      </div>
+                    ))}
+                    
+                    {/* Contact us button inside the benefits column for mobile */}
+                    <button 
+                      onClick={() => setShowPopup(true)}
+                      className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center mt-3"
+                      style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
+                    >
+                      Contact us
+                      <svg className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </div>
+                  {/* Image appears next to bullet points for devices less than 500px */}
+                  <div className="flex justify-center order-2 lg:order-1">
+                    <div className="relative">
+                      <img
+                        src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
+                        alt="Professional woman in business attire"
+                        className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px] lg:max-w-sm"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden xs:block space-y-2 xs:space-y-2.5 sm:space-y-3">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
                       <div className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
@@ -124,19 +246,99 @@ const Hero = () => {
                       <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
                     </div>
                   ))}
-                  
-                  {/* Contact us button inside the benefits column for mobile */}
-                  <button 
-                    onClick={() => setShowPopup(true)}
-                    className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center mt-3"
-                    style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
-                  >
-                    Contact us
-                    <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
-                  </button>
                 </div>
-                {/* Image appears next to bullet points for devices less than 500px */}
-                <div className="flex justify-center order-2 lg:order-1">
+              </div>
+              
+              {/* Contact us button for xs screens and above */}
+              <div className="hidden xs:block">
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center"
+                  style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
+                >
+                  Contact us
+                  <svg className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            
+            {/* Right Form with Integrated Image */}
+            <div className="lg:col-span-2">
+              {/* Mobile Layout: Full width form */}
+              <div className="xs:hidden">
+                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 sm:p-4 space-y-2.5 sm:space-y-3">
+                  <div className="text-center space-y-2 sm:space-y-3">
+                    <div className="inline-block bg-white text-blue-600 px-1.5 sm:px-2 py-1 rounded-full text-xs font-semibold">
+                      Free Consultation
+                    </div>
+                    <h2 className="text-sm sm:text-base font-bold text-white">
+                      Request a Call Back
+                    </h2>
+                  </div>
+
+                  <GoogleFormHandler 
+                    formData={formData}
+                    onSuccess={handleFormSuccess}
+                    onError={handleFormError}
+                    showSuccessMessage={true}
+                    showErrorMessage={true}
+                  >
+                    <div className="space-y-2 sm:space-y-2.5">
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                        required
+                      />
+                      
+                      <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                        required
+                      />
+
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
+                        required
+                      />
+
+                      <select 
+                        className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 appearance-none text-xs sm:text-sm"
+                        value={formData.service}
+                        onChange={(e) => handleInputChange('service', e.target.value)}
+                        required
+                      >
+                        <option value="">- Select Services -</option>
+                        <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                        <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                      </select>
+
+                      <button 
+                        type="submit"
+                        className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 sm:h-8 text-xs sm:text-sm font-medium transition-colors"
+                      >
+                        Request a Call Back
+                      </button>
+                    </div>
+                  </GoogleFormHandler>
+                </div>
+              </div>
+
+              {/* Desktop Layout: Image + Form side by side */}
+              <div className="hidden xs:grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
+                {/* Image - Hidden on xs screens and above, shown on mobile */}
+                <div className="flex justify-center lg:justify-end order-2 lg:order-1">
                   <div className="relative">
                     <img
                       src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
@@ -145,181 +347,73 @@ const Hero = () => {
                     />
                   </div>
                 </div>
-              </div>
-              <div className="hidden xs:block space-y-2 xs:space-y-2.5 sm:space-y-3">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center gap-1.5 xs:gap-2 sm:gap-3">
-                    <div className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 flex-shrink-0 bg-white rounded-full flex items-center justify-center shadow-sm z-10 relative">
-                      <Check className="w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4 text-blue-600" />
+
+                {/* Form */}
+                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2">
+                  <div className="text-center space-y-2 sm:space-y-3">
+                    <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
+                      Free Consultation
                     </div>
-                    <span className="text-xs xs:text-sm sm:text-base">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Contact us button for xs screens and above */}
-            <div className="hidden xs:block">
-              <button 
-                onClick={() => setShowPopup(true)}
-                className="px-2.5 xs:px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 rounded-lg text-xs xs:text-sm sm:text-base font-medium transition-colors flex items-center"
-                style={{ backgroundColor: '#f8e164', color: '#1e3a8a' }}
-              >
-                Contact us
-                <ArrowRight className="ml-1.5 sm:ml-2 w-2.5 h-2.5 xs:w-3 xs:h-3 sm:w-4 sm:h-4" style={{ color: '#1e3a8a' }} />
-              </button>
-            </div>
-          </div>
-          
-          {/* Right Form with Integrated Image */}
-          <div className="lg:col-span-2">
-            {/* Mobile Layout: Full width form */}
-            <div className="xs:hidden">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 sm:p-4 space-y-2.5 sm:space-y-3">
-                <div className="text-center space-y-2 sm:space-y-3">
-                  <div className="inline-block bg-white text-blue-600 px-1.5 sm:px-2 py-1 rounded-full text-xs font-semibold">
-                    Free Consultation
-                  </div>
-                  <h2 className="text-sm sm:text-base font-bold text-white">
-                    Request a Call Back
-                  </h2>
-                </div>
-
-                <GoogleFormHandler 
-                  formData={formData}
-                  onSuccess={handleFormSuccess}
-                  onError={handleFormError}
-                  showSuccessMessage={true}
-                  showErrorMessage={true}
-                >
-                  <div className="space-y-2 sm:space-y-2.5">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
-                      required
-                    />
-                    
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
-                      required
-                    />
-
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 text-xs sm:text-sm"
-                      required
-                    />
-
-                    <select 
-                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 sm:h-8 px-1.5 sm:px-2 appearance-none text-xs sm:text-sm"
-                      value={formData.service}
-                      onChange={(e) => handleInputChange('service', e.target.value)}
-                      required
-                    >
-                      <option value="">- Select Services -</option>
-                      <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
-                      <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
-                    </select>
-
-                    <button 
-                      type="submit"
-                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 sm:h-8 text-xs sm:text-sm font-medium transition-colors"
-                    >
+                    <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-bold text-white">
                       Request a Call Back
-                    </button>
+                    </h2>
                   </div>
-                </GoogleFormHandler>
-              </div>
-            </div>
 
-            {/* Desktop Layout: Image + Form side by side */}
-            <div className="hidden xs:grid grid-cols-2 lg:grid-cols-2 gap-2 xs:gap-3 sm:gap-4 lg:gap-6 items-center">
-              {/* Image - Hidden on xs screens and above, shown on mobile */}
-              <div className="flex justify-center lg:justify-end order-2 lg:order-1">
-                <div className="relative">
-                  <img
-                    src="/medium-shaot-woman-standing-office-with-her-hands-folded.png"
-                    alt="Professional woman in business attire"
-                    className="w-full h-auto object-cover max-w-[80px] xs:max-w-[100px] sm:max-w-[120px] lg:max-w-sm"
-                  />
+                  <GoogleFormHandler 
+                    formData={formData}
+                    onSuccess={handleFormSuccess}
+                    onError={handleFormError}
+                    showSuccessMessage={true}
+                    showErrorMessage={true}
+                  >
+                    <div className="space-y-2 xs:space-y-2.5 sm:space-y-3 lg:space-y-4">
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                        required
+                      />
+                      
+                      <input
+                        type="tel"
+                        placeholder="Phone Number"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                        required
+                      />
+
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
+                        required
+                      />
+
+                      <select 
+                        className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 appearance-none text-xs xs:text-sm sm:text-base"
+                        value={formData.service}
+                        onChange={(e) => handleInputChange('service', e.target.value)}
+                        required
+                      >
+                        <option value="">- Select Services -</option>
+                        <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
+                        <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
+                      </select>
+
+                      <button 
+                        type="submit"
+                        className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 text-xs xs:text-sm sm:text-base lg:text-lg font-medium transition-colors"
+                      >
+                        Request a Call Back
+                      </button>
+                    </div>
+                  </GoogleFormHandler>
                 </div>
-              </div>
-
-              {/* Form */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2.5 xs:p-3 sm:p-4 lg:p-8 space-y-2.5 xs:space-y-3 sm:space-y-6 order-1 lg:order-2">
-                <div className="text-center space-y-2 sm:space-y-3">
-                  <div className="inline-block bg-white text-blue-600 px-1.5 xs:px-2 sm:px-3 py-1 rounded-full text-xs font-semibold">
-                    Free Consultation
-                  </div>
-                  <h2 className="text-sm xs:text-base sm:text-lg lg:text-2xl font-bold text-white">
-                    Request a Call Back
-                  </h2>
-                </div>
-
-                <GoogleFormHandler 
-                  formData={formData}
-                  onSuccess={handleFormSuccess}
-                  onError={handleFormError}
-                  showSuccessMessage={true}
-                  showErrorMessage={true}
-                >
-                  <div className="space-y-2 xs:space-y-2.5 sm:space-y-3 lg:space-y-4">
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      value={formData.name}
-                      onChange={(e) => handleInputChange('name', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                      required
-                    />
-                    
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      value={formData.phone}
-                      onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                      required
-                    />
-
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      value={formData.email}
-                      onChange={(e) => handleInputChange('email', e.target.value)}
-                      className="w-full bg-white text-gray-900 placeholder:text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 text-xs xs:text-sm sm:text-base"
-                      required
-                    />
-
-                    <select 
-                      className="w-full bg-white text-gray-500 border-0 rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 px-1.5 xs:px-2 sm:px-3 lg:px-4 appearance-none text-xs xs:text-sm sm:text-base"
-                      value={formData.service}
-                      onChange={(e) => handleInputChange('service', e.target.value)}
-                      required
-                    >
-                      <option value="">- Select Services -</option>
-                      <option value="corporate-tax-filing">Corporate Tax (Filing only)</option>
-                      <option value="corporate-tax-filing-payable">Corporate Tax (Filing + Tax Payable)</option>
-                    </select>
-
-                    <button 
-                      type="submit"
-                      className="w-full bg-gray-800 hover:bg-gray-700 text-white rounded-lg h-7 xs:h-8 sm:h-10 lg:h-12 text-xs xs:text-sm sm:text-base lg:text-lg font-medium transition-colors"
-                    >
-                      Request a Call Back
-                    </button>
-                  </div>
-                </GoogleFormHandler>
               </div>
             </div>
           </div>
