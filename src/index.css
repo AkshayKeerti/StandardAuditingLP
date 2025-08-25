@@ -181,7 +181,7 @@
     @apply w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold rounded-lg transition-all duration-300;
   }
 
-  /* Extra small screen utilities (less than 400px) */
+  /* Extra small screen utilities (less than 500px) */
   .xs-text-xs {
     @apply text-xs;
   }
